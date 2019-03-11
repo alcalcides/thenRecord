@@ -1,6 +1,8 @@
+git config --global user.name "NomeDoUsuario"
+git config --global user.email "Email@DoUsuario"
 git init
 git init --bare
-git clone file:////<path> <folder>
+git clone <path> <folder>
 git clone <sshAddress> <folder>
 
 ssh-keygen

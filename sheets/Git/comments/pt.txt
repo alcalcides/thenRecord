@@ -1,6 +1,8 @@
+configurações iniciais do Git Bush
+configurações iniciais do Git Bush
 inicializa um sistema git local
 inicializa um repositório git num servidor na rede
-clona dentro de <folder> o repositório da rede
+clona dentro de <folder> o repositório da rede. Exemplo de <folder>: file:////Home-PC/Users/Public/Documents (Windows troque / por \)
 clona diretório github na pasta <folder> 
 
 cria chave ssh numa estação para usar no github.com

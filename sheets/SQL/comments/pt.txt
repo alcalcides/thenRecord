@@ -1,0 +1,230 @@
+Info básicas no console
+Mostra banco de dados criados
+Descrição
+exibe script sql de criação da tabela
+exibe script sql de criação da base de dados
+
+Criar banco de dados
+
+
+
+
+Para usar o banco de dados criado acima
+
+Criar banco de dados caso ele ainda não exista
+
+Deletar banco de dados
+
+
+Criar tabela
+
+
+
+
+
+Números do tipo abc,de
+
+
+
+
+Só se nomeDaTabela1 existe;
+
+
+
+
+Verificar tabelas de um bd
+
+Verificar PROPRIEDADES da tabela criada
+idem
+
+
+
+Alterar tabela
+Adicionar um campo
+idem
+
+Adicionar um campo após um campo específico
+
+
+Adicionar um campo na primeira posição
+
+
+Eliminar um campo
+
+
+Alterar o nome do campo e todas as constrants
+
+
+Modificar constrants de um campo existente
+
+
+Eliminar um campo
+
+
+Renomear tabela
+
+
+Configurar tabelas para FOREIGN KEY
+
+
+Adicionar foreign key
+
+
+
+
+
+Excluir foreign key no MySQL
+
+
+Adicionar chave estrangeira
+
+
+
+
+Deletar tabela
+
+
+
+
+Esta linha pode ser omitida se a ordem é exatamente a mesma da definição da tabela
+
+
+
+
+
+
+Selecionar registros
+Toda a tabela é exibida
+Ordena pelo nomedoCampo2 em ordem descendente
+Critério de desempate é nomeDoCampo3 (também serve pensar: primeiro ordena pelo nomeDoCampo3 e depois pelo nomeDoCampo2)
+Mostra campos específicos
+Condiciona exibição acima aos registros cujo nomedoCampo4 não é nulo
+Ordena pelo campo nomedoCampo3
+Exibe apenas uma faixa específica
+Primeiro ordene nomedoCampo2 de maneira ascendente, depois, preservando, ordene de acordo com o nomeDoCampo1 de maneira descendente
+Define conjunto de possíveis valores para nomeDoCampo1
+Retorna todos os valores distintos do campo nomeDoCampo1
+Retorna a quantidade de linhas da query
+Retornao máximo valor da query
+Retorna o mínimo valor da query
+Retorna o valor mínimo e o seu respectivo valor do campo1 (no caso de mais de um valor, só mostra o primeiro)
+Soma os valores do campo2 da query
+Média aritmética dos valores do campo2 da query
+Limita a quantidade de dados exibidos
+Pesquisa o fragmento no campo da tabela. case sensitive. % substitui nenhum ou qualquer conjunto de caracteres
+Underline substitui um caractere qualquer 
+
+
+Unir uma tabela a outra verticalmente
+
+
+Unir uma tabela a outra horizontalmente
+Duplica atributos nomeDoCampo1
+Mostra o campo em comum apenas na primeira tabela
+Exibe os registros de nomeDaTabela sem correspondência com nomeDaTabela1
+Exibe os registros de nomeDaTabela1 sem correspondência com nomeDaTabela
+MySQL não tem JOIN FULL
+
+
+
+
+
+
+
+
+Modificar registros
+
+
+
+APAGA APENAS UM REGISTRO POR SEGURANÇA
+
+
+Excluir registros
+
+
+
+
+Exclui todos os registros da tabela
+
+Criar índices
+O inteiro de cada campo determina até que casa o indice deve considerar
+
+
+Remover índices
+
+
+Verifica existência de alguma estrutura do banco de dados
+
+    O que quiser fazer
+
+
+	O que quiser fazer
+
+
+
+Criar visualizações 
+Para usar a view basta fazer SELECT * FROM nomeDaVisualizacao;
+    
+    
+    
+    
+    
+
+Modificar visualizações 
+Para usar a view basta fazer SELECT * FROM nomeDaVisualizacao;
+
+
+
+
+
+
+Excluir visualizações
+
+
+Criar funções e Procedimentos
+
+
+
+
+
+
+
+
+
+
+A chamada da função é feita a seguir
+
+Apagar funções e Procedimentos
+
+
+
+
+Mostrar aliás, apelido
+
+
+Fazer transação
+
+    COMANDOS
+    COMANDOS
+    COMANDOS
+
+
+
+Trigger
+
+
+
+        OLD representa um registro que existe na tabela antes de ser alterado ou excluído
+        NEW representa um registro que está sendo inserido ou atualizado.
+   
+
+
+Importar dados
+
+
+Exportar dados
+
+
+Duplicar tabela
+
+A nova tabela tem apenas alguns campos da original
