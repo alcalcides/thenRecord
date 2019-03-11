@@ -1,0 +1,48 @@
+git init
+git init --bare
+git clone file:////<path> <folder>
+git clone <sshAddress> <folder>
+
+ssh-keygen
+
+git remote -v 
+git push origin master 
+git pull origin master 
+git fetch origin <branchName> 
+git status 
+
+git add <file> 
+git add . 
+git add *.php 
+git reset HEAD <file> 
+git rm <file> 
+
+git commit -m "Description" 
+git commit -a -m "Description" 
+git commit -amend -m "Description edited" 
+
+git diff 
+gif diff --staged 
+
+git tag 
+git tag -a <tagName> -m "Definição" 
+git tag -a <tagName> <CommitKey> -m "Definição" 
+git tag -d <tagName> 
+
+git branch 
+git branch -d <branchName> 
+git branch <branchName> 
+git merge <branchName> 
+
+git log 
+git log --pretty=oneline 
+git log -p 
+git log -p -2 
+gitk 
+git show <tagName> 
+
+git checkout -- <file> 
+git checkout <tagName> 
+git checkout "master" 
+git checkout <branchName> 
+git checkout -b <branchName> 

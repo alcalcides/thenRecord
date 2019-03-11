@@ -1,0 +1,48 @@
+inicializa um sistema git local
+inicializa um repositório git num servidor na rede
+clona dentro de <folder> o repositório da rede
+clona diretório github na pasta <folder> 
+
+cria chave ssh numa estação para usar no github.com
+
+lista os nomes dos repositórios 
+repositório recebe o que está no ramo master do repositório local
+atualiza ramo master local com o arquivos modificados no repositório
+atualiza ramo local <branchName> com o arquivos modificados no repositório
+exibe arquivos modificados no diretório de trabalho
+
+envia arquivos apontados pelo git status para o diretório de espera
+opera sobre todos os arquivos apontados pelo git status
+opera sobre os arquivos com extensão .php apontodas pelo git status
+retira da área de espera
+libera arquivo do diretório git após sua exclusão da área de trabalho
+
+Cadastra versão do diretório de espera
+cadastra versão do diretório de trabalho
+edita última versão
+
+exibe as modificações nos arquivos em relação ao repositório
+idem, mas em relação ao diretório stage
+
+lista tags para identificar commits 
+cria tag para o commit atual
+cria tag para um commit qualquer identificado pelo seu Key
+deleta tag
+
+lista os ramos criados
+deleta ramo especificado
+cria um novo ramo (indicação: manutenção, versões)
+traz as alterações do ramo especificado para o ramo corrente
+
+relatório de todas as versões (commits) - Quem/Quando/Descrição
+Chave/Descrição
+Quem/Quando/Descrição/git diff
+idem para só para as 2 últimas entradas
+interface com relatório completo
+relatório do commit e da tag criada
+
+desfaz alterações na área de trabalho (antes do add)
+diretório de trabalho é retornado para o momento especificado
+carrega a pasta de trabalho com a versão do branch master
+carrega branch específico na área de trabalho
+cria e carrega novo branch na área de trabalho

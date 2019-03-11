@@ -1,0 +1,289 @@
+--get started no console
+SHOW DATABASES;
+STATUS;
+SHOW CREATE TABLE nomeDaTabela; -- observar script sql de criação da tabela
+SHOW CREATE DATABASE nomeDoBancoDeDados; -- observar script sql de criação da base de dados
+
+
+/*
+Criar banco de dados
+*/
+CREATE DATABASE nomeDoBancoDeDados
+	DEFAULT CHARACTER SET utf8
+	DEFAULT COLLATE utf8_general_ci;
+
+USE nomeDoBancoDeDados;/*Para usar o banco de dados criado acima*/
+
+/*
+Criar banco de dados caso ele ainda não exista
+*/
+CREATE DATABASE IF NOT EXISTS nomeDoBancoDeDados;
+
+/*
+Deletar banco de dados
+*/
+DROP DATABASE nomeDoBancoDeDados;
+
+/*
+Criar tabela
+*/
+USE nomeDoBancoDeDados;
+CREATE TABLE IF NOT EXISTS nomeDaTabela(
+	nomeDoCampo1 INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	nomeDoCampo2 VARCHAR(10) UNIQUE NOT NULL DEFAULT '',
+    nomeDoCampo3 INT NOT NULL,
+    nomeDoCampo4 DECIMAL(5,2), -- numeros do tipo abc,de
+    nomeDoCampo5 ENUM('M', 'F'), 
+    nomeDoCampo6 VARCHAR(10) DEFAULT 'Brazil', 
+    INDEX (nomeDoCampo2),
+    PRIMARY KEY (nomeDoCampo1),
+    CONSTRAINT nomeDaLimitacao FOREIGN KEY (nomeDoCampo2) REFERENCES nomeDaTabela1(nomeDoCampo2naTabela1), --Só se nomeDaTabela1 existe;
+    INDEX nomeDoIndice(nomedoCampo2)
+)
+ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+--verificar tabelas de um bd
+SHOW TABLES;
+
+--Verificar PROPRIEDADES da tabela criada
+DESCRIBE nomeDaTabela; -- ou entao
+DESC nomeDaTabela;
+
+
+/*
+Alterar tabela
+*/
+
+/*Adicionar um campo*/
+ALTER TABLE nomeDaTabela ADD COLUMN nomeDoNovoCampo INT NOT NULL; --ou então:
+ALTER TABLE nomeDaTabela ADD nomeDoNovoCampo INT NOT NULL;
+
+/*Adicionar um campo após um campo específico*/
+ALTER TABLE nomeDaTabela ADD COLUMN nomeDoNovoCampo INT NOT NULL AFTER nomeDoCampo1
+
+/*Adicionar um campo na primeira posição*/
+ALTER TABLE nomeDaTabela ADD COLUMN nomeDoNovoCampo INT NOT NULL FIRST;
+
+/*Eliminar um campo*/
+ALTER TABLE nomeDaTabela ADD PRIMARY KEY (campoTal);
+
+/*Alterar o nome do campo e todas as constrants*/
+ALTER TABLE nomeDaTabela CHANGE COLUMN nomeDoCampoAntigo nomeDoNovoCampo INT NOT NULL;
+
+/*Modificar constrants de um campo existente*/
+ALTER TABLE nomeDaTabela MODIFY COLUMN nomeDoCampo1 INT NOT NULL AUTO_INCREMENT;
+
+/*Eliminar um campo*/
+ALTER TABLE nomeDaTabela DROP COLUMN nomeDoCamp
+
+/*Renomear tabela*/
+ALTER TABLE nomeAtualDaTabela RENAME TO novoNomeDaTabela;
+
+/*Configurar tabelas para FOREIGN KEY*/
+ALTER TABLE nomeDaTabela ENGINE='InnoDB';
+
+/*Adicionar foreign key*/
+ALTER TABLE nomeDaTabela 
+    ADD CONSTRAINT nomeDaLimitacao
+    FOREIGN KEY (nomeDoCampo1)
+    REFERENCES nomeDaTabela1(nomeDoCampo2);
+
+/*Excluir foreign key no MySQL*/
+ALTER TABLE nomeDaTabela DROP FOREIGN KEY nomeDaLimitacao;
+
+ALTER TABLE nomeDaTabela ADD COLUMN chaveEst int;
+ALTER TABLE nomeDaTabela FOREIGN KEY chaveEst REFERENCES tabTal(campoTal);
+
+
+/*
+Deletar tabela
+*/
+DROP TABLE nomeDaTabela;
+
+/*
+Inserir registros
+*/
+INSERT INTO nomeDaTabela 
+    (nomeDoCampo1, nomeDoCampo2, nomeDoCampo3,nomeDoCampo4)  --esta linha pode ser omitida se a ordem é exatamente a mesma da definição da tabela
+    VALUES 
+    (DEFAULT,'tal','yyyy-mm-dd',hh:mm:ss),
+    (DEFAULT,'tal','yyyy-mm-dd',hh:mm:ss),
+    (DEFAULT,'tal','yyyy-mm-dd',hh:mm:ss);
+
+/*
+Selecionar registros
+*/
+SELECT * FROM nomeDaTabela;
+SELECT * FROM nomeDaTabela ORDER BY nomeDoCampo2 DESC;
+SELECT * FROM nomeDaTabela ORDER BY nomeDoCampo2, nomeDoCampo3 ASC; --primeiro ordena em nomeDoCampo3 para só depois ordenar segundo nomeDoCampo2
+SELECT nomeDoCampo1, nomedoCampo2, nomeDoCampo3 FROM nomeDaTabela ORDER BY nomeDoCampo3;
+SELECT nomeDoCampo1, nomeDoCampo2, nomeDoCampo3 FROM nomeDaTabela WHERE nomeDoCampo4!=NULL;
+SELECT nomeDoCampo1, nomeDoCampo2, nomeDoCampo3 FROM nomeDaTabela WHERE nomeDoCampo4 = 5 ORDER BY nomeDoCampo3;
+SELECT * FROM nomeDaTabela WHERE nomeDoCampo1 BETWEEN 10 AND 20;
+SELECT * FROM nomeDaTabela WHERE nomeDoCampo1 BETWEEN 10 AND 20 ORDER BY nomeDoCampo1 DESC, nomedoCampo2 ASC; --primeiro ordene nomedoCampo2 de maneira ascendente, depois, preservando, ordene de acordo com o nomeDoCampo1 de maneira descendente
+SELECT * FROM nomeDaTabela WHERE nomeDoCampo1 IN ('2', '5', '100');
+SELECT DISTINCT nomeDoCampo1 FROM nomeDaTabela; --retorna todos os valores distintos do campo nomeDoCampo1
+SELECT COUNT(*) FROM nomeDaTabela; -- retorna a quantidade de linhas da query
+SELECT MAX(nomeDoCampo2) FROM nomeDaTabela; -- retornao máximo valor da query
+SELECT MIN(nomeDoCampo2) FROM nomeDaTabela; -- retornao mínimo valor da query
+SELECT nomeDoCampo1, MIN(nomeDoCampo2) FROM nomeDaTabela; --retorna o valor mínimo e o seu respectivo valor do campo1 (no caso de mais de um valor, só mostra o primeiro)
+SELECT SUM(nomeDoCampo2) FROM nomeDaTabela; -- soma os valores do campo2 da query
+SELECT AVG(nomeDoCampo2) FROM nomeDaTabela; -- média aritmética dos valores do campo2 da query
+SELECT * FROM nomeDaTabela LIMIT 10; -- limita a quantidade de dados exibidos
+SELECT * FROM nomeDaTabela WHERE nomeDoCampo2 LIKE '%fragmento%'; --pesquisa o fragmento no campo da tabela. case sensitive. % substitui nenhum ou qualquer conjunto de caracteres
+SELECT * FROM nomeDaTabela WHERE nomeDoCampo2 NOT LIKE '%fragmento_%'; -- o underline substitui um caractere qualquer 
+SELECT * FROM nomeDaTabela ORDER BY nomeDoCampo1 ASC;--ASC OU DESC
+
+/*
+Unir uma tabela a outra verticalmente
+*/
+SELECT * FROM nomeDaTabela UNION SELECT * FROM nomeDaTabela1;
+
+/*
+Unir uma tabela a outra horizontalmente
+*/
+SELECT * FROM nomeDaTabela JOIN nomeDaTabela1 ON nomeDaTabela.nomeDoCampo1 = nomeDaTabela1.nomeDoCampo1;--Duplica atributos nomeDoCampo1
+SELECT * FROM nomeDaTabela JOIN nomeDaTabela1 USING (nomeDoCampo1) ORDER BY nomeDaTabela.nomeDoCampo1;--Mostra o campo em comum apenas na primeira tabela
+SELECT * FROM nomeDaTabela LEFT JOIN nomeDaTabela1 USING (nomeDoCampo1) ORDER BY nomeDaTabela.nomeDoCampo1;--Exibe os registros de nomeDaTabela sem correspondência com nomeDaTabela1
+SELECT * FROM nomeDaTabela RIGHT JOIN nomeDaTabela1 USING (nomeDoCampo1) ORDER BY nomeDaTabela.nomeDoCampo1;--Exibe os registros de nomeDaTabela1 sem correspondência com nomeDaTabela
+SELECT t1.nomeDoCampo1, t1.nomeDoCampo2, t2.nomeDoCampo2, t2.nomeDoCampo3 FROM nomeDaTabela AS t1 JOIN nomeDaTabela1 AS t2;--MySQL não tem JOIN FULL
+
+SELECT nomeDoCampo4, COUNT(*) FROM nomeDaTabela GROUP BY nomeDoCampo4 ORDER BY nomeDoCampo4;.
+
+SELECT nomeDoCampo3, COUNT(*) FROM nomeDaTabela WHERE nomeDoCampo1 > 10
+	GROUP BY nomeDoCampo3 HAVING nomeDoCampo3 >
+		(SELECT avg(nomeDoCampo3) FROM nomeDaTabela)
+	ORDER BY COUNT(*);
+	5571993818609
+
+/*
+Modificar registros
+*/
+UPDATE nomeDaTabela 
+SET nomeDoCampo1=[value1],nomeDoCampo2=[value2],nomeDoCampo3=[value3] 
+WHERE nomeDoCampo4=7
+LIMIT 1;  --APAGA APENAS UM REGISTRO POR SEGURANÇA
+
+
+
+
+/*
+Excluir registros
+*/
+DELETE FROM nomeDaTabela 
+WHERE 0
+LIMIT 1;
+
+TRUNCATE TABLE nomeDaTabela; --exclui todos os registros da tabela
+
+
+/*
+Criar índices
+*/
+CREATE INDEX nomeDoIndice ON nomeDaTabela(nomeDoCampo1(3),nomeDoCampo2(5)); --o inteiro de cada campo determina até que casa o indice deve considerar
+
+/*
+Remover índices
+*/
+ALTER TABLE nomeDaTabela DROP INDEX nomeDoIndice;
+
+
+/*
+Verifica existência de alguma estrutura do banco de dados
+*/
+IF EXISTS (SELECT * FROM nomeDaTabela WHERE id=3) BEGIN  
+	--O que quiser fazer
+END
+ELSE
+	--O que quiser fazer
+END
+
+/*
+Criar visualizações 
+*/
+CREATE VIEW nomeDaVisualizacao AS -- Para usar a view basta fazer SELECT * FROM nomeDaVisualizacao;
+    SELECT 
+        nomeDoCampo1 AS 'alias',
+        nomeDoCampo2 AS 'alias1',
+    FROM nomeDaTabela
+    WHERE nomeDoCampo3 < 1.5;
+
+/*
+Modificar visualizações 
+*/
+ALTER VIEW nomeDaVisualizacao AS -- Para usar a view basta fazer SELECT * FROM nomeDaVisualizacao;
+    SELECT 
+        nomeDoCampo1 AS 'alias',
+        nomeDoCampo2 AS 'alias1',
+    FROM nomeDaTabela
+    WHERE nomeDoCampo3 < 1.5;
+
+/*
+Excluir visualizações
+*/
+DROP VIEW nomeDaVisualizacao;
+
+/*
+Criar funções e Procedimentos
+*/
+DELIMITER //
+    CREATE PROCEDURE nomeDoProcedimento (IN nomeDoCampo1 INT) BEGIN
+        DECLARE temp, temp1 VARCHAR(10);
+        SELECT nomeDoCampo2, nomeDoCampo3 INTO temp,temp1 
+            FROM nomeDaTabela 
+            WHERE id = nomeDoCampo1;
+        INSERT INTO nomeDaTabela1 VALUES (temp, temp1,nomeDoCampo1);
+        DELETE FROM nomeDaTabela WHERE id = nomeDoCampo1;
+    END;
+//--A chamada da função é feita a seguir
+CALL nomeDoProcedimento(SELECT id FROM nomeDaTabela WHERE status = NULL);
+
+/*
+Apagar funções e Procedimentos
+*/
+DELIMITER //
+    DROP PROCEDURE IF EXISTS nomeDoProcedimento;
+//
+
+/*
+Mostrar aliás, apelido
+*/
+SELECT nomeDoCampo1 AS alias1, nomeDoCampo2 AS alias2 FROM nomeDaTabela aliasDaTabela;
+
+/*
+Fazer transação
+*/
+START TRANSACTION ;
+    #COMANDOS
+    #COMANDOS
+    #COMANDOS
+COMMIT;
+ROLLBACK;
+
+/*
+Trigger
+*/
+DELIMITER //
+    CREATE TRIGGER nomeDoTrigger AFTER DELETE ON nomeDaTabela FOR EACH ROW BEGIN
+        INSERT INTO nomeDaTabela1 VALUES (OLD.nomeDoCampo1, OLD.nomeDoCampo2);
+        #OLD representa um registro que existe na tabela antes de ser alterado ou excluído
+        #NEW representa um registro que está sendo inserido ou atualizado.
+    END;
+//
+
+/*
+Importar dados
+*/
+LOAD DATA INFILE 'caminho/caminho.ext' INTO TABLE nomeDaTabela FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+
+/*
+Exportar dados
+*/
+SELECT * INTO OUTFILE 'caminho/caminho.ext' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' FROM nomeDaTabela;
+
+/*
+Duplicar tabela
+*/
+CREATE TABLE nomeDaTabela SELECT * FROM nomeDaTabela1;
+CREATE TABLE nomeDaTabela SELECT * FROM nomeDaTabela1 nomeDoCampo1 nomedoCampo2 nomeDoCampo3;--A nova tabela tem apenas alguns campos da original
