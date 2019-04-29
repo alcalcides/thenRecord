@@ -1,0 +1,36 @@
+vantagens OO
+	confiável
+	oportuno
+	manutennível
+	extensao
+	reuso
+	natural
+
+
+objeto	
+	atributos
+	métodos
+	estado
+
+classes
+	modela um objeto
+	responde
+		atributo: o que o objeto tem
+		método: o que o objeto faz
+		estado: qual a situação do objeto
+
+visibilidade
+	nível de acesso ao componentes de uma classe
+	tipos
+		publico
+			+
+		privado
+			-
+			somente a classe
+		protegido
+			#
+			visível a
+				classe atual 
+				sub-classe
+		default
+			público ao pacote
