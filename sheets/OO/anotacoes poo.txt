@@ -1,0 +1,58 @@
+vantagens OO
+	confiável
+	oportuno
+	manutenível
+	extensão
+	reuso
+	natural
+
+
+objeto	
+	atributos
+	métodos
+	estado
+	instanciação de uma classe
+
+classes
+	modela um objeto
+	responde
+		atributo: o que cada objeto tem
+		método: o que cada objeto faz
+		estado: qual a situação de cada objeto
+
+visibilidade
+	nível de acesso ao componentes de uma classe
+	tipos
+		publico
+			+
+		privado
+			-
+			somente a classe
+		protegido
+			#
+			visível a
+				classe atual 
+				sub-classe
+		default
+			público ao pacote
+
+métodos acessores
+	get
+	set
+
+pilares
+	abstração
+	encapsulamento
+		construir partes inacessíveis à implementação externa
+		interface
+			não tem atributos, só os métodos 
+				abstratos (só a assinatura)
+				públicos
+			atributos da classe fonte com visibilidade não pública
+			métodos get e set da classe com visibilidade private
+		facultativo, mas tem vantagens:
+			tornar mudanças internas irrelevantes
+			reuso facilitado
+			diminuição de efeitos colaterais
+	herança
+	polimorfismo
