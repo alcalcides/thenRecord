@@ -60,3 +60,7 @@ pilares
 agregação entre classe
 	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
 	método main de classe principal instancia objetos das classes agregadas
+
+herança
+	forma de uma classe recebe uma cópia dinâmica dos atributos e métodos de outra classe
+	classe filha "extends" classe mãe

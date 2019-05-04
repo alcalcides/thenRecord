@@ -1,0 +1,16 @@
+tempo/velocidade
+	only s(ruim)/manual
+abertura
+	diametro/diafragma
+	only a
+sensibilidade
+	iso
+
+
+fotômetro
+	zero == automático
+
+
+
+
+
