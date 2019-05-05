@@ -6,7 +6,6 @@ vantagens OO
 	reuso
 	natural
 
-
 objeto	
 	atributos
 	métodos
@@ -64,3 +63,35 @@ agregação entre classe
 herança
 	forma de uma classe recebe uma cópia dinâmica dos atributos e métodos de outra classe
 	classe filha "extends" classe mãe
+	classe descendente/ancestral
+		relação entre classe avó-neta ou mais distante
+		classe filha-mãe não é uma classe descendente-ancestral
+
+
+classe 
+	abstrata
+		não pode ser instanciada
+		não pode implementar um objeto
+		Pode servir como classe mãe
+	final
+		não admite classe filha
+		classe folha obrigatoriamente
+		não admite herança
+método 
+	abstrato
+		declarado na classe, mas implementado 
+		só ocorre dentro de
+			interface
+			classe abstrata
+	final
+		não pode ser sobreposto nas classes herdadas	
+		obrigatoriamente herdado pelas classes filhas
+
+tipos de herança
+	implementação/pobre
+		implementa instanciação para uma classe abstrata
+		todos os atributos e métodos são os herdados
+		não tem atributos nem métodos específicos
+	diferencial
+		herda tudo da classe mãe
+		tem atributos/métodos não herdados/específico
