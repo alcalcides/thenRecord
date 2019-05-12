@@ -37,15 +37,17 @@ visibilidade
 
 métodos acessores
 	get
+		retorna determinado atributo do objeto
 	set
+		atribue determinado valor a um atributo do objeto
 
-pilares
+pilares POO
 	abstração
 	encapsulamento
 		construir partes inacessíveis à implementação externa
 		interface
 			não tem atributos, só os métodos 
-				abstratos (só a assinatura)
+				abstratos (só visibilidade, modificadores, retorno, nome e assinatura)
 				públicos
 			atributos da classe fonte com visibilidade não pública
 			métodos get e set da classe com visibilidade private
@@ -58,40 +60,72 @@ pilares
 
 agregação entre classe
 	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
-	método main de classe principal instancia objetos das classes agregadas
+	classe agregadora instancia classes agregadas
+		criando de objetos no método main
+		criando atributos do tipo ClasseAgregada
+
 
 herança
-	forma de uma classe recebe uma cópia dinâmica dos atributos e métodos de outra classe
+	forma de uma classe recebe uma cópia dinâmica dos atributos e métodos de uma outra
+	implementa a relação "é um" entre classes diferentes
 	classe filha "extends" classe mãe
+	especificação/generalização
+		classe filha especifica classe mãe
+		classe mãe generaliza classe filha
 	classe descendente/ancestral
 		relação entre classe avó-neta ou mais distante
 		classe filha-mãe não é uma classe descendente-ancestral
+	raiz/folha
+		raiz
+			não herda de nenhuma outra classe
+			não tem mãe
+		folha
+			não há nenhuma classe que herde dela
+			não tem filha
+	tipos de herança
+		implementação/pobre
+			implementa instanciação para uma classe abstrata
+			todos os atributos e métodos são os herdados
+			não tem atributos nem métodos específicos
+		diferencial
+			herda tudo da classe mãe
+			tem atributos/métodos não herdados/específico
 
 
-classe 
-	abstrata
+
+conceitos abstract/final
+	classe abstrata
 		não pode ser instanciada
 		não pode implementar um objeto
 		Pode servir como classe mãe
-	final
+		só pode ter métodos se forem abstratos
+	classe final
 		não admite classe filha
 		classe folha obrigatoriamente
 		não admite herança
-método 
-	abstrato
+	método abstrato
 		declarado na classe, mas implementado 
 		só ocorre dentro de
 			interface
 			classe abstrata
-	final
+	método final
 		não pode ser sobreposto nas classes herdadas	
 		obrigatoriamente herdado pelas classes filhas
 
-tipos de herança
-	implementação/pobre
-		implementa instanciação para uma classe abstrata
-		todos os atributos e métodos são os herdados
-		não tem atributos nem métodos específicos
-	diferencial
-		herda tudo da classe mãe
-		tem atributos/métodos não herdados/específico
+assinatura de um método
+	assinatura igual implica
+		mesma quantidade de argumentos
+		mesmo tipo para cada argumento
+		mesma ordem de argumentos na chamada da função
+	assinaturas diferentes não implica
+		mesmo nome de variáveis
+		mesmo retorno
+
+tipos de polimorfismo
+	sobreposição
+		múltipla forma entre classes com herança
+		substituição de um metodo na classe filha
+		métodos de mesma assinatura
+	sobrecarga
+		polimorfismo entre métodos de mesmo nome numa classe
+		cada método tem uma assinatura diferente
