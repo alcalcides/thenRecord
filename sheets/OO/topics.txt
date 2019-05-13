@@ -12,6 +12,12 @@ objeto
 	estado
 	instanciação de uma classe
 
+fornecedores x clientes
+	fornecedores
+		programador cria/altera uma abstração
+	cliente
+		programador instancia uma abstração já criada
+
 classes
 	modela um objeto
 	responde
@@ -43,10 +49,16 @@ métodos acessores
 
 pilares POO
 	abstração
+		esconder detalhes
+		simplificação
+		ex
+			funções
+			classes
 	encapsulamento
 		construir partes inacessíveis à implementação externa
 		interface
 			não tem atributos, só os métodos 
+			public abstract metodoTal(assinatura)
 				abstratos (só visibilidade, modificadores, retorno, nome e assinatura)
 				públicos
 			atributos da classe fonte com visibilidade não pública
@@ -54,9 +66,15 @@ pilares POO
 		facultativo, mas tem vantagens:
 			tornar mudanças internas irrelevantes
 			reuso facilitado
+			atributos e metodos são implementados na classe fornecedora
 			diminuição de efeitos colaterais
 	herança
+		copiar atributos e métodos de uma classe para outra
+		extends
 	polimorfismo
+		alterar localmente o comportamento de um trecho de programa já escrito
+		@Override
+		tipos*
 
 agregação entre classe
 	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
@@ -94,6 +112,9 @@ herança
 
 
 conceitos abstract/final
+	variável final
+		final float pi = 3.14f
+		constante
 	classe abstrata
 		não pode ser instanciada
 		não pode implementar um objeto
