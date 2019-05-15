@@ -6,11 +6,58 @@ vantagens OO
 	reuso
 	natural
 
+história
+	Simuula: Primeira linguagem OO
+		Autores
+			Ole-Johan Dahl
+			Kristen Nygaard 
+		Centro Norueguês de Computação
+		1962
+		simulações computacionais	
+	Smalltalk
+		Alan Key
+		1972
+		Xerox PARC
+	C++
+		Bjarne Stroustrup
+		AT&T Bell Labs
+		Desempenho e compatibilidade com C
+
+Definições POO
+	Kristen Nygaard: um programa:
+		é um modelo físico
+		simula o comportamento de uma entidade real ou imaginária do mundo
+	Alan Key:
+		tudo é objeto
+		um programa consiste na comunicação entre objetos
+		objetos tem sua própria memória (outro objeto)
+		todo objeto é a instância de uma classe
+		todos os objetos de uma determinada classe aceitam as mesmas mensagens
+	Grady Booch
+		um objeto possui 
+			estado
+			comportamento
+			identidade
+	Desconhecido
+		uma liguagem é OO se possui
+			abstração (classes, interfaces ...)
+			encapsulamento (classes tem atributos e métodos)
+			herança (classe pode conter uma cópia de outra)
+			polimorfismo (código que serve para classe mãe, serve para a filha
+
+
+classes
+	tipo abstrato de dado
+	membros
+		atributo: o que cada objeto tem
+		método: o que cada objeto faz
+		estado: qual a situação de cada objeto
+	modela um objeto
+
 objeto	
-	atributos
-	métodos
-	estado
 	instanciação de uma classe
+	objetos de mesma classe tem mesmos membros, mas valores possivelmente diferentes
+
 
 fornecedores x clientes
 	fornecedores
@@ -18,12 +65,6 @@ fornecedores x clientes
 	cliente
 		programador instancia uma abstração já criada
 
-classes
-	modela um objeto
-	responde
-		atributo: o que cada objeto tem
-		método: o que cada objeto faz
-		estado: qual a situação de cada objeto
 
 visibilidade
 	nível de acesso ao componentes de uma classe
@@ -66,25 +107,31 @@ pilares POO
 		facultativo, mas tem vantagens:
 			tornar mudanças internas irrelevantes
 			reuso facilitado
-			atributos e metodos são implementados na classe fornecedora
+			atributos e metodos são implementados na classe de implementação
+				classe Tal implements classe InterfaceDaClasseTal
 			diminuição de efeitos colaterais
-	herança
-		copiar atributos e métodos de uma classe para outra
-		extends
-	polimorfismo
-		alterar localmente o comportamento de um trecho de programa já escrito
-		@Override
-		tipos*
+	herança*
+	polimorfismo*
+		
 
+associação entre objetos
+	atributo(s) de um objeto é um outro objeto
 agregação entre classe
+	TEM
 	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
 	classe agregadora instancia classes agregadas
 		criando de objetos no método main
 		criando atributos do tipo ClasseAgregada
-
+composição
+	É FEITO/COMPOSTO DE
+	
 
 herança
-	forma de uma classe recebe uma cópia dinâmica dos atributos e métodos de uma outra
+	copiar membros de uma classe para outra
+		classe mãe/superclasse/base
+		classe filha/subclasse/derivada
+	extends
+	forma de uma classe recebe uma cópia dinâmica dos membros de uma outra
 	implementa a relação "é um" entre classes diferentes
 	classe filha "extends" classe mãe
 	especificação/generalização
@@ -110,8 +157,17 @@ herança
 			tem atributos/métodos não herdados/específico
 
 
+membros estáticos
+	vínculo com a classe, não com o objeto
+	atributos estáticos
+		o valor é atribuído à classe
+		o atributo é armazenado numa mesma memória para todos os objetos da classe
+		todos os objetos da classe compartilham o mesmo atributo estático
+	métodos estáticos
+		pode ser chamado sem fazer referência a um objeto específico
 
-conceitos abstract/final
+
+membros abstract/final
 	variável final
 		final float pi = 3.14f
 		constante
@@ -142,11 +198,15 @@ assinatura de um método
 		mesmo nome de variáveis
 		mesmo retorno
 
-tipos de polimorfismo
-	sobreposição
-		múltipla forma entre classes com herança
-		substituição de um metodo na classe filha
-		métodos de mesma assinatura
-	sobrecarga
-		polimorfismo entre métodos de mesmo nome numa classe
-		cada método tem uma assinatura diferente
+polimorfismo
+	objetos podem ser manipulados como sendo da sua superclasse
+	nova implementação para um trecho de programa já escrito
+		@Override
+	tipos de polimorfismo
+		sobreposição
+			múltipla forma entre classes com herança
+			substituição de um metodo na classe filha
+			métodos de mesma assinatura
+		sobrecarga
+			polimorfismo entre métodos de mesmo nome numa classe
+			cada método tem uma assinatura diferente
