@@ -1,4 +1,4 @@
-vantagens OO
+vantagens POO
 	confiável
 	oportuno
 	manutenível
@@ -6,7 +6,7 @@ vantagens OO
 	reuso
 	natural
 
-história
+História POO
 	Simuula: Primeira linguagem OO
 		Autores
 			Ole-Johan Dahl
@@ -53,10 +53,24 @@ classes
 		método: o que cada objeto faz
 		estado: qual a situação de cada objeto
 	modela um objeto
-
+	camel case maiúsculo
 objeto	
 	instanciação de uma classe
 	objetos de mesma classe tem mesmos membros, mas valores possivelmente diferentes
+	camel case minúsculo
+pacotes
+	contém
+		classes
+		interfaces
+		enumerações
+		outros pacotes (hierarquia)
+	camel case minúsculo
+	implementados criando-se diretórios
+		cada ponto marca um nível hierárquico
+			br.com.dominio.pacoteTal (hierarquia inversa)
+				ajuda na ordenação dos pacotes
+				evita conflitos de pacotes entre projetos diferentes
+	package tal; (cabeçalho de arquivo .java)
 
 
 fornecedores x clientes
@@ -66,27 +80,92 @@ fornecedores x clientes
 		programador instancia uma abstração já criada
 
 
-visibilidade
-	nível de acesso ao componentes de uma classe
+visibilidade de membros
+	nível de acesso aos componentes de uma classe
 	tipos
 		publico
 			+
+			visível dentro de todo o projeto
 		privado
 			-
-			somente a classe
+			visível somente à classe
 		protegido
 			#
-			visível a
-				classe atual 
-				sub-classe
+			visível ao
+				pacote 
+				subclasses
 		default
-			público ao pacote
+			visível apenas dentro do pacote
+			package-private
+
 
 métodos acessores
 	get
 		retorna determinado atributo do objeto
 	set
 		atribue determinado valor a um atributo do objeto
+		validações aqui são úteis para o cliente
+método construtor
+	inicializa objetos
+	tem o mesmo nome da classe
+	função default super();
+palavra chave this
+	serve para se referenciar ao objeto que chama a função
+	usado para resolver a ambiguidade this.parametroTal = parametroTal
+
+
+membros estáticos
+	modificador static
+	vínculo com a classe, não com o objeto
+	disponibilidade a partir da criação
+	atributos estáticos
+		o valor é atribuído à classe
+		todos os objetos da classe herdam o atributo estático
+		todos os objetos da classe compartilham o mesmo atributo estático
+		o atributo é armazenado numa mesma memória para todos os objetos da classe
+		ClasseTal.atributoEstaticoTal
+		System.in
+	métodos estáticos
+		não pode fazer chamada de membros não estáticos
+		só pode ser chamado sem fazer referência a um objeto específico
+		ClasseTal.metodoEstaticoTal()
+
+modificadores de classe
+	public
+	abstract
+		não pode ser instanciada
+		não pode implementar um objeto
+		Pode servir como classe mãe
+		só pode ter métodos se forem abstratos
+	final
+		não admite classe filha
+		classe folha obrigatoriamente
+		não admite herança
+	default: package-private
+
+modificador final para membros
+	atributo
+		constante
+		final float pi = 3.14f
+	método final
+		não pode ser sobreposto nas classes herdadas	
+		obrigatoriamente herdado pelas classes filhas
+
+método abstrato
+		declarado na classe, mas implementado 
+		só ocorre dentro de
+			interface
+			classe abstrata
+
+assinatura de um método
+	assinatura igual implica
+		mesma quantidade de argumentos
+		mesmo tipo para cada argumento
+		mesma ordem de argumentos na chamada da função
+	assinaturas diferentes não implica
+		mesmo nome de variáveis
+		mesmo retorno
+
 
 pilares POO
 	abstração
@@ -156,47 +235,6 @@ herança
 			herda tudo da classe mãe
 			tem atributos/métodos não herdados/específico
 
-
-membros estáticos
-	vínculo com a classe, não com o objeto
-	atributos estáticos
-		o valor é atribuído à classe
-		o atributo é armazenado numa mesma memória para todos os objetos da classe
-		todos os objetos da classe compartilham o mesmo atributo estático
-	métodos estáticos
-		pode ser chamado sem fazer referência a um objeto específico
-
-
-membros abstract/final
-	variável final
-		final float pi = 3.14f
-		constante
-	classe abstrata
-		não pode ser instanciada
-		não pode implementar um objeto
-		Pode servir como classe mãe
-		só pode ter métodos se forem abstratos
-	classe final
-		não admite classe filha
-		classe folha obrigatoriamente
-		não admite herança
-	método abstrato
-		declarado na classe, mas implementado 
-		só ocorre dentro de
-			interface
-			classe abstrata
-	método final
-		não pode ser sobreposto nas classes herdadas	
-		obrigatoriamente herdado pelas classes filhas
-
-assinatura de um método
-	assinatura igual implica
-		mesma quantidade de argumentos
-		mesmo tipo para cada argumento
-		mesma ordem de argumentos na chamada da função
-	assinaturas diferentes não implica
-		mesmo nome de variáveis
-		mesmo retorno
 
 polimorfismo
 	objetos podem ser manipulados como sendo da sua superclasse
