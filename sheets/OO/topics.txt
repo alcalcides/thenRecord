@@ -248,3 +248,12 @@ polimorfismo
 		sobrecarga
 			polimorfismo entre métodos de mesmo nome numa classe
 			cada método tem uma assinatura diferente
+
+classes internas (ci) -- carece exercícios práticos
+	dentro do escopo da classe externa (ce)
+	pouco usado
+	um objeto da ci tem que estar vinculado ao da ce
+	todos os membros da ce são visíveis a ci
+	utilidade
+ 		só vai ser usada pela classe externa
+ 		outras classes não poderão acessar a classe interna
