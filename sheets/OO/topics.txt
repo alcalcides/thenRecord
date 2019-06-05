@@ -7,7 +7,7 @@ vantagens POO
 	natural
 
 História POO
-	Simuula: Primeira linguagem OO
+	Simula: Primeira linguagem OO
 		Autores
 			Ole-Johan Dahl
 			Kristen Nygaard 
@@ -88,7 +88,8 @@ visibilidade de membros
 			visível dentro de todo o projeto
 		privado
 			-
-			visível somente à classe
+			visível somente à classe ou classe interna
+			não visível à classe herdade
 		protegido
 			#
 			visível ao
@@ -109,9 +110,12 @@ método construtor
 	inicializa objetos
 	tem o mesmo nome da classe
 	função default super();
+		primeiro comando do método construtor
+		implícito ou oculto (sempre haverá)
 palavra chave this
 	serve para se referenciar ao objeto que chama a função
-	usado para resolver a ambiguidade this.parametroTal = parametroTal
+	usado para resolver a ambiguidade nos métodos setters
+		this.parametroTal = parametroTal
 
 
 membros estáticos
@@ -122,13 +126,15 @@ membros estáticos
 		o valor é atribuído à classe
 		todos os objetos da classe herdam o atributo estático
 		todos os objetos da classe compartilham o mesmo atributo estático
-		o atributo é armazenado numa mesma memória para todos os objetos da classe
+		o atributo é armazenado numa mesma memória 
+			acessível a todos os objetos da classe
 		ClasseTal.atributoEstaticoTal
 		System.in
 	métodos estáticos
-		não pode fazer chamada de membros não estáticos
+		não pode instanciar membros não estáticos
 		só pode ser chamado sem fazer referência a um objeto específico
-		ClasseTal.metodoEstaticoTal()
+			ClasseTal.metodoEstaticoTal()
+		System.out.println()
 
 modificadores de classe
 	public
@@ -137,10 +143,10 @@ modificadores de classe
 		não pode implementar um objeto
 		Pode servir como classe mãe
 		só pode ter métodos se forem abstratos
+		se não tiver atributos, é "equivalente" a uma interface
 	final
 		não admite classe filha
 		classe folha obrigatoriamente
-		não admite herança
 	default: package-private
 
 modificador final para membros
@@ -152,7 +158,7 @@ modificador final para membros
 		obrigatoriamente herdado pelas classes filhas
 
 método abstrato
-		declarado na classe, mas implementado 
+		declarado na classe, mas implementado apenas na classe filha
 		só ocorre dentro de
 			interface
 			classe abstrata
@@ -177,18 +183,21 @@ pilares POO
 	encapsulamento
 		construir partes inacessíveis à implementação externa
 		interface
-			não tem atributos, só os métodos 
+			pode ter também atributos (mas para quê???)
+				static ou final (???)
 			public abstract metodoTal(assinatura)
 				abstratos (só visibilidade, modificadores, retorno, nome e assinatura)
 				públicos
 			atributos da classe fonte com visibilidade não pública
-			métodos get e set da classe com visibilidade private
+			métodos acessores (get e set) da classe com visibilidade private
 		facultativo, mas tem vantagens:
 			tornar mudanças internas irrelevantes
 			reuso facilitado
 			atributos e metodos são implementados na classe de implementação
 				classe Tal implements classe InterfaceDaClasseTal
 			diminuição de efeitos colaterais
+		uma classe pode ter mais de uma interface
+			classe Tal implements inter1, inter2, inter3,... 			
 	herança*
 	polimorfismo*
 		
@@ -199,7 +208,7 @@ agregação entre classe
 	TEM
 	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
 	classe agregadora instancia classes agregadas
-		criando de objetos no método main
+		instanciando objetos no método main
 		criando atributos do tipo ClasseAgregada
 composição
 	É FEITO/COMPOSTO DE
