@@ -54,10 +54,12 @@ classes
 		estado: qual a situação de cada objeto
 	modela um objeto
 	camel case maiúsculo
+
 objeto	
 	instanciação de uma classe
 	objetos de mesma classe tem mesmos membros, mas valores possivelmente diferentes
 	camel case minúsculo
+
 pacotes
 	contém
 		classes
@@ -103,6 +105,7 @@ visibilidade de membros
 métodos acessores
 	get
 		retorna determinado atributo do objeto
+		atributos booleanos: isOpened()
 	set
 		atribue determinado valor a um atributo do objeto
 		validações aqui são úteis para o cliente
@@ -141,6 +144,8 @@ modificadores de classe
 	abstract
 		não pode ser instanciada
 		não pode implementar um objeto
+		tipo de dado (ou conjunto de funcionalidades) incompleto
+			ou seja, tem que ser completado pela subclasse
 		Pode servir como classe mãe
 		só pode ter métodos se forem abstratos
 		se não tiver atributos, é "equivalente" a uma interface
@@ -157,11 +162,13 @@ modificador final para membros
 		não pode ser sobreposto nas classes herdadas	
 		obrigatoriamente herdado pelas classes filhas
 
-método abstrato
-		declarado na classe, mas implementado apenas na classe filha
-		só ocorre dentro de
-			interface
-			classe abstrata
+método abstrato 
+	contrário de método concreto
+	UML => escrito em itálico
+	declarado na classe, mas implementado apenas na classe filha
+	só ocorre dentro de
+		interface
+		classe abstrata
 
 assinatura de um método
 	assinatura igual implica
@@ -183,13 +190,19 @@ pilares POO
 	encapsulamento
 		construir partes inacessíveis à implementação externa
 		interface
-			pode ter também atributos (mas para quê???)
+			estabelece relação de 
+				serviço oferecido pela classe
+				objetivo da classe
+				o que a classe faz
+			modificadores padrão (o compilador insere automaticamente): 
+				public 
+				abstract 
+					visibilidade, modificadores, retorno, nome e assinatura
+			boa prática
+				atributos da classe fonte com visibilidade não pública
+				métodos acessores (get e set) da classe de implementação com visibilidade private
+			?pode ter também atributos (mas para quê???)?
 				static ou final (???)
-			public abstract metodoTal(assinatura)
-				abstratos (só visibilidade, modificadores, retorno, nome e assinatura)
-				públicos
-			atributos da classe fonte com visibilidade não pública
-			métodos acessores (get e set) da classe com visibilidade private
 		facultativo, mas tem vantagens:
 			tornar mudanças internas irrelevantes
 			reuso facilitado
@@ -203,18 +216,22 @@ pilares POO
 		
 
 associação entre objetos
-	atributo(s) de um objeto é um outro objeto
-agregação entre classe
-	TEM
-	objeto de tal classe tem 0/1/2... objeto(s) de outra classe
-	classe agregadora instancia classes agregadas
-		instanciando objetos no método main
-		criando atributos do tipo ClasseAgregada
-composição
-	É FEITO/COMPOSTO DE
+	membro(s) de um objeto é um outro objeto
+	tipos
+		agregação entre classe
+			implementa relação "OBJETO AGREGADOR" TEM "OBJETO AGREGADO"
+			objeto de tal classe tem 0/1/2... objeto(s) de outra classe
+			classe agregadora instancia classes agregadas
+				instanciando objetos no método main
+				criando atributos do tipo ClasseAgregada
+		composição
+			É FEITO/COMPOSTO DE
 	
 
 herança
+	aplicada a
+		classes
+		interfaces
 	copiar membros de uma classe para outra
 		classe mãe/superclasse/base
 		classe filha/subclasse/derivada
@@ -222,6 +239,7 @@ herança
 	forma de uma classe recebe uma cópia dinâmica dos membros de uma outra
 	implementa a relação "é um" entre classes diferentes
 	classe filha "extends" classe mãe
+		em Java, não é possível herdar de mais de uma classe
 	especificação/generalização
 		classe filha especifica classe mãe
 		classe mãe generaliza classe filha
@@ -243,6 +261,25 @@ herança
 		diferencial
 			herda tudo da classe mãe
 			tem atributos/métodos não herdados/específico
+	Cast
+		conversões entre classes vinculadas por herança
+		Upcast
+			converter objeto de uma classe para sua superclasse
+			conversão para um tipo mais genérico
+			é automaticamente realizado pelo compilador
+			Animal animal = (Animal) new Mamifero(); 
+				ou Animal animal = new Mamifero(); //o compilador converte automaticamente
+		Downcast
+			converter objeto de uma classe para sua classe filha (ou descendente)
+			conversão para um tipo mais específico
+			Animal animal = new Gato(); Gato tal = (Gato) animal			
+			ClassCastException
+				Animal animal = new Gato(); Rato rato = (Rato) animal;
+				instaceof 
+					retorna True se o objeto é de determinada classe ou de alguma superclasse
+					if (animal instanceof Rato){Rato rato = (Rato) animal;}
+					objetoTal instanceof Object // sempre retorna True
+
 
 
 polimorfismo
@@ -253,10 +290,57 @@ polimorfismo
 		sobreposição
 			múltipla forma entre classes com herança
 			substituição de um metodo na classe filha
+				super.funcaoSobrescrita chama função sobrescrita 
 			métodos de mesma assinatura
+			boa prática: sobrescreva
+				toString()
+				equals()
+					determina se um objeto tem o mesmo conteúdo do outro
+					this.equals(thatRsrsrs);
+				hashCode()
+					se dois objetos retornam hashCode diferentes, eles são diferentes
+					se dois objetos retornam o mesmo hashCode, eles podem ser diferentes
+			Late binding (vinculação tardia)
+				conexão entre o nome de um método e o seu código/programa
+				quando há sobreposição de métodos, há um mesmo nome com dois códigos diferentes
+				tipos (como vincular tal nome ao código correto?)
+					estática
+						quando não há 
+							sobreposição de métodos
+							cast
+						compilador da IDE Eclipse sempre usa vinculação estática
+							o método/tipo é vinculado ou método/tipo mais generalista
+					dinâmica
+						o método específico não é confundido pelo método genérico sobrescrito
+						vinculação só ocorre em tempo de execução
+				se não há sobreposição/cast, a vinculação estática é idêntica à dinâmica
+
 		sobrecarga
 			polimorfismo entre métodos de mesmo nome numa classe
 			cada método tem uma assinatura diferente
+
+
+
+refatoração
+	automaticamente pela IDE
+	consiste em
+		renomear um membro e atualizar o programa para o novo nome
+		extrair 
+			método
+			classe
+			superclasse
+			interface
+		mover mebros para
+			superclasse (pull up)
+			subclasse (pull down)
+			outra classe (move)
+	code smell
+		código duplicado
+		método longo
+		muitos comentários
+		má modelagem
+
+
 
 classes internas (ci) -- carece exercícios práticos
 	dentro do escopo da classe externa (ce)
@@ -266,3 +350,8 @@ classes internas (ci) -- carece exercícios práticos
 	utilidade
  		só vai ser usada pela classe externa
  		outras classes não poderão acessar a classe interna
+	classes anônimas
+		ou seria objetos anônimos?
+		usado quando é certo que só será usado um objeto para função específica
+		funtalTal(new ClasseTal);
+
