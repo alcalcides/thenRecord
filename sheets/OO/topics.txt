@@ -1,19 +1,19 @@
 vantagens POO
-	confi·vel
+	confi√°vel
 	oportuno
-	manutenÌvel
-	extens„o
+	manuten√≠vel
+	extens√£o
 	reuso
 	natural
 
-HistÛria POO
+Hist√≥ria POO
 	Simula: Primeira linguagem OO
 		Autores
 			Ole-Johan Dahl
 			Kristen Nygaard 
-		Centro NorueguÍs de ComputaÁ„o
+		Centro Noruegu√™s de Computa√ß√£o
 		1962
-		simulaÁıes computacionais	
+		simula√ß√µes computacionais	
 	Smalltalk
 		Alan Key
 		1972
@@ -23,15 +23,15 @@ HistÛria POO
 		AT&T Bell Labs
 		Desempenho e compatibilidade com C
 
-DefiniÁıes POO
+Defini√ß√µes POO
 	Kristen Nygaard: um programa:
-		È um modelo fÌsico
-		simula o comportamento de uma entidade real ou imagin·ria do mundo
+		√© um modelo f√≠sico
+		simula o comportamento de uma entidade real ou imagin√°ria do mundo
 	Alan Key:
-		tudo È objeto
-		um programa consiste na comunicaÁ„o entre objetos
-		objetos tem sua prÛpria memÛria (outro objeto)
-		todo objeto È a inst‚ncia de uma classe
+		tudo √© objeto
+		um programa consiste na comunica√ß√£o entre objetos
+		objetos tem sua pr√≥pria mem√≥ria (outro objeto)
+		todo objeto √© a inst√¢ncia de uma classe
 		todos os objetos de uma determinada classe aceitam as mesmas mensagens
 	Grady Booch
 		um objeto possui 
@@ -39,118 +39,118 @@ DefiniÁıes POO
 			comportamento
 			identidade
 	Desconhecido
-		uma liguagem È OO se possui
-			abstraÁ„o (classes, interfaces ...)
-			encapsulamento (classes tem atributos e mÈtodos)
-			heranÁa (classe pode conter uma cÛpia de outra)
-			polimorfismo (cÛdigo que serve para classe m„e, serve para a filha
+		uma liguagem √© OO se possui
+			abstra√ß√£o (classes, interfaces ...)
+			encapsulamento (classes tem atributos e m√©todos)
+			heran√ßa (classe pode conter uma c√≥pia de outra)
+			polimorfismo (c√≥digo que serve para classe m√£e, serve para a filha
 
 
 classes
 	tipo abstrato de dado
 	membros
 		atributo: o que cada objeto tem
-		mÈtodo: o que cada objeto faz
-		estado: qual a situaÁ„o de cada objeto
+		m√©todo: o que cada objeto faz
+		estado: qual a situa√ß√£o de cada objeto
 	modela um objeto
-	camel case mai˙sculo
+	camel case mai√∫sculo
 
 objeto	
-	instanciaÁ„o de uma classe
+	instancia√ß√£o de uma classe
 	objetos de mesma classe tem mesmos membros, mas valores possivelmente diferentes
-	camel case min˙sculo
+	camel case min√∫sculo
 
 pacotes
-	contÈm
+	cont√©m
 		classes
 		interfaces
-		enumeraÁıes
+		enumera√ß√µes
 		outros pacotes (hierarquia)
-	camel case min˙sculo
-	implementados criando-se diretÛrios
-		cada ponto marca um nÌvel hier·rquico
+	camel case min√∫sculo
+	implementados criando-se diret√≥rios
+		cada ponto marca um n√≠vel hier√°rquico
 			br.com.dominio.pacoteTal (hierarquia inversa)
-				ajuda na ordenaÁ„o dos pacotes
+				ajuda na ordena√ß√£o dos pacotes
 				evita conflitos de pacotes entre projetos diferentes
-	package tal; (cabeÁalho de arquivo .java)
+	package tal; (cabe√ßalho de arquivo .java)
 
 
 fornecedores x clientes
 	fornecedores
-		programador cria/altera uma abstraÁ„o
+		programador cria/altera uma abstra√ß√£o
 	cliente
-		programador instancia uma abstraÁ„o j· criada
+		programador instancia uma abstra√ß√£o j√° criada
 
 
 visibilidade de membros
-	nÌvel de acesso aos componentes de uma classe
+	n√≠vel de acesso aos componentes de uma classe
 	tipos
 		publico
 			+
-			visÌvel dentro de todo o projeto
+			vis√≠vel dentro de todo o projeto
 		privado
 			-
-			visÌvel somente ‡ classe ou classe interna
-			n„o visÌvel ‡ classe herdade
+			vis√≠vel somente √† classe ou classe interna
+			n√£o vis√≠vel √† classe herdade
 		protegido
 			#
-			visÌvel ao
+			vis√≠vel ao
 				pacote 
 				subclasses
 		default
-			visÌvel apenas dentro do pacote
+			vis√≠vel apenas dentro do pacote
 			package-private
 
 
-mÈtodos acessores
+m√©todos acessores
 	get
 		retorna determinado atributo do objeto
 		atributos booleanos: isOpened()
 	set
 		atribue determinado valor a um atributo do objeto
-		validaÁıes aqui s„o ˙teis para o cliente
-mÈtodo construtor
+		valida√ß√µes aqui s√£o √∫teis para o cliente
+m√©todo construtor
 	inicializa objetos
 	tem o mesmo nome da classe
-	funÁ„o default super();
-		primeiro comando do mÈtodo construtor
-		implÌcito ou oculto (sempre haver·)
+	fun√ß√£o default super();
+		primeiro comando do m√©todo construtor
+		impl√≠cito ou oculto (sempre haver√°)
 palavra chave this
-	serve para se referenciar ao objeto que chama a funÁ„o
-	usado para resolver a ambiguidade nos mÈtodos setters
+	serve para se referenciar ao objeto que chama a fun√ß√£o
+	usado para resolver a ambiguidade nos m√©todos setters
 		this.parametroTal = parametroTal
 
 
-membros est·ticos
+membros est√°ticos
 	modificador static
-	vÌnculo com a classe, n„o com o objeto
-	disponibilidade a partir da criaÁ„o
-	atributos est·ticos
-		o valor È atribuÌdo ‡ classe
-		todos os objetos da classe herdam o atributo est·tico
-		todos os objetos da classe compartilham o mesmo atributo est·tico
-		o atributo È armazenado numa mesma memÛria 
-			acessÌvel a todos os objetos da classe
+	v√≠nculo com a classe, n√£o com o objeto
+	disponibilidade a partir da cria√ß√£o
+	atributos est√°ticos
+		o valor √© atribu√≠do √† classe
+		todos os objetos da classe herdam o atributo est√°tico
+		todos os objetos da classe compartilham o mesmo atributo est√°tico
+		o atributo √© armazenado numa mesma mem√≥ria 
+			acess√≠vel a todos os objetos da classe
 		ClasseTal.atributoEstaticoTal
 		System.in
-	mÈtodos est·ticos
-		n„o pode instanciar membros n„o est·ticos
-		sÛ pode ser chamado sem fazer referÍncia a um objeto especÌfico
+	m√©todos est√°ticos
+		n√£o pode instanciar membros n√£o est√°ticos
+		s√≥ pode ser chamado sem fazer refer√™ncia a um objeto espec√≠fico
 			ClasseTal.metodoEstaticoTal()
 		System.out.println()
 
 modificadores de classe
 	public
 	abstract
-		n„o pode ser instanciada
-		n„o pode implementar um objeto
+		n√£o pode ser instanciada
+		n√£o pode implementar um objeto
 		tipo de dado (ou conjunto de funcionalidades) incompleto
 			ou seja, tem que ser completado pela subclasse
-		Pode servir como classe m„e
-		sÛ pode ter mÈtodos se forem abstratos
-		se n„o tiver atributos, È "equivalente" a uma interface
+		Pode servir como classe m√£e
+		s√≥ pode ter m√©todos se forem abstratos
+		se n√£o tiver atributos, √© "equivalente" a uma interface
 	final
-		n„o admite classe filha
+		n√£o admite classe filha
 		classe folha obrigatoriamente
 	default: package-private
 
@@ -158,125 +158,126 @@ modificador final para membros
 	atributo
 		constante
 		final float pi = 3.14f
-	mÈtodo final
-		n„o pode ser sobreposto nas classes herdadas	
+	m√©todo final
+		n√£o pode ser sobreposto nas classes herdadas	
 		obrigatoriamente herdado pelas classes filhas
 
-mÈtodo abstrato 
-	contr·rio de mÈtodo concreto
-	UML => escrito em it·lico
+m√©todo abstrato 
+	contr√°rio de m√©todo concreto
+	UML => escrito em it√°lico
 	declarado na classe, mas implementado apenas na classe filha
-	sÛ ocorre dentro de
+	s√≥ ocorre dentro de
 		interface
 		classe abstrata
 
-assinatura de um mÈtodo
+assinatura de um m√©todo
 	assinatura igual implica
 		mesma quantidade de argumentos
 		mesmo tipo para cada argumento
-		mesma ordem de argumentos na chamada da funÁ„o
-	assinaturas diferentes n„o implica
-		mesmo nome de vari·veis
+		mesma ordem de argumentos na chamada da fun√ß√£o
+	assinaturas diferentes n√£o implica
+		mesmo nome de vari√°veis
 		mesmo retorno
 
 
 pilares POO
-	abstraÁ„o
+	abstra√ß√£o
 		esconder detalhes
-		simplificaÁ„o
+		simplifica√ß√£o
 		ex
-			funÁıes
+			fun√ß√µes
 			classes
 	encapsulamento
-		construir partes inacessÌveis ‡ implementaÁ„o externa
+		construir partes inacess√≠veis √† implementa√ß√£o externa
 		interface
-			estabelece relaÁ„o de 
-				serviÁo oferecido pela classe
+			estabelece rela√ß√£o de 
+				servi√ßo oferecido pela classe
 				objetivo da classe
 				o que a classe faz
-			modificadores padr„o (o compilador insere automaticamente): 
+			modificadores padr√£o (o compilador insere automaticamente): 
 				public 
 				abstract 
 					visibilidade, modificadores, retorno, nome e assinatura
-			boa pr·tica
-				atributos da classe fonte com visibilidade n„o p˙blica
-				mÈtodos acessores (get e set) da classe de implementaÁ„o com visibilidade private
-			?pode ter tambÈm atributos (mas para quÍ???)?
+			boa pr√°tica
+				atributos da classe fonte com visibilidade n√£o p√∫blica
+				m√©todos acessores (get e set) da classe de implementa√ß√£o com visibilidade private
+			?pode ter tamb√©m atributos (mas para qu√™???)?
 				static ou final (???)
 		facultativo, mas tem vantagens:
-			tornar mudanÁas internas irrelevantes
+			tornar mudan√ßas internas irrelevantes
 			reuso facilitado
-			atributos e metodos s„o implementados na classe de implementaÁ„o
+			atributos e metodos s√£o implementados na classe de implementa√ß√£o
 				classe Tal implements classe InterfaceDaClasseTal
-			diminuiÁ„o de efeitos colaterais
+			diminui√ß√£o de efeitos colaterais
 		uma classe pode ter mais de uma interface
 			classe Tal implements inter1, inter2, inter3,... 			
-	heranÁa*
+	heran√ßa*
 	polimorfismo*
 		
 
-associaÁ„o entre objetos
-	membro(s) de um objeto È um outro objeto
+associa√ß√£o entre objetos
+	membro(s) de um objeto √© um outro objeto
 	tipos
-		agregaÁ„o entre classe
-			implementa relaÁ„o "OBJETO AGREGADOR" TEM "OBJETO AGREGADO"
+		agrega√ß√£o entre classe
+			implementa rela√ß√£o "OBJETO AGREGADOR" TEM "OBJETO AGREGADO"
 			objeto de tal classe tem 0/1/2... objeto(s) de outra classe
 			classe agregadora instancia classes agregadas
-				instanciando objetos no mÈtodo main
+				instanciando objetos no m√©todo main
 				criando atributos do tipo ClasseAgregada
-		composiÁ„o
-			… FEITO/COMPOSTO DE
+		composi√ß√£o
+			√â FEITO/COMPOSTO DE
+			classe instacia objeto de outra classe de que √© compostas
 	
 
-heranÁa
+heran√ßa
 	aplicada a
 		classes
 		interfaces
 	copiar membros de uma classe para outra
-		classe m„e/superclasse/base
+		classe m√£e/superclasse/base
 		classe filha/subclasse/derivada
 	extends
-	forma de uma classe recebe uma cÛpia din‚mica dos membros de uma outra
-	implementa a relaÁ„o "È um" entre classes diferentes
-	classe filha "extends" classe m„e
-		em Java, n„o È possÌvel herdar de mais de uma classe
-	especificaÁ„o/generalizaÁ„o
-		classe filha especifica classe m„e
-		classe m„e generaliza classe filha
+	forma de uma classe recebe uma c√≥pia din√¢mica dos membros de uma outra
+	implementa a rela√ß√£o "√© um (tipo de)" entre classes diferentes
+	classe filha "extends" classe m√£e
+		em Java, n√£o √© poss√≠vel herdar de mais de uma classe
+	especifica√ß√£o/generaliza√ß√£o
+		classe filha especifica classe m√£e
+		classe m√£e generaliza classe filha
 	classe descendente/ancestral
-		relaÁ„o entre classe avÛ-neta ou mais distante
-		classe filha-m„e n„o È uma classe descendente-ancestral
+		rela√ß√£o entre classe av√≥-neta ou mais distante
+		classe filha-m√£e n√£o √© uma classe descendente-ancestral
 	raiz/folha
 		raiz
-			n„o herda de nenhuma outra classe
-			n„o tem m„e
+			n√£o herda de nenhuma outra classe
+			n√£o tem m√£e
 		folha
-			n„o h· nenhuma classe que herde dela
-			n„o tem filha
-	tipos de heranÁa
-		implementaÁ„o/pobre
-			implementa instanciaÁ„o para uma classe abstrata
-			todos os atributos e mÈtodos s„o os herdados
-			n„o tem atributos nem mÈtodos especÌficos
+			n√£o h√° nenhuma classe que herde dela
+			n√£o tem filha
+	tipos de heran√ßa
+		implementa√ß√£o/pobre
+			implementa instancia√ß√£o para uma classe abstrata
+			todos os atributos e m√©todos s√£o os herdados
+			n√£o tem atributos nem m√©todos espec√≠ficos
 		diferencial
-			herda tudo da classe m„e
-			tem atributos/mÈtodos n„o herdados/especÌfico
+			herda tudo da classe m√£e
+			tem atributos/m√©todos n√£o herdados/espec√≠fico
 	Cast
-		conversıes entre classes vinculadas por heranÁa
+		convers√µes entre classes vinculadas por heran√ßa
 		Upcast
 			converter objeto de uma classe para sua superclasse
-			convers„o para um tipo mais genÈrico
-			È automaticamente realizado pelo compilador
+			convers√£o para um tipo mais gen√©rico
+			√© automaticamente realizado pelo compilador
 			Animal animal = (Animal) new Mamifero(); 
 				ou Animal animal = new Mamifero(); //o compilador converte automaticamente
 		Downcast
 			converter objeto de uma classe para sua classe filha (ou descendente)
-			convers„o para um tipo mais especÌfico
+			convers√£o para um tipo mais espec√≠fico
 			Animal animal = new Gato(); Gato tal = (Gato) animal			
 			ClassCastException
 				Animal animal = new Gato(); Rato rato = (Rato) animal;
 				instaceof 
-					retorna True se o objeto È de determinada classe ou de alguma superclasse
+					retorna True se o objeto √© de determinada classe ou de alguma superclasse
 					if (animal instanceof Rato){Rato rato = (Rato) animal;}
 					objetoTal instanceof Object // sempre retorna True
 
@@ -284,49 +285,49 @@ heranÁa
 
 polimorfismo
 	objetos podem ser manipulados como sendo da sua superclasse
-	nova implementaÁ„o para um trecho de programa j· escrito
+	nova implementa√ß√£o para um trecho de programa j√° escrito
 		@Override
 	tipos de polimorfismo
-		sobreposiÁ„o
-			m˙ltipla forma entre classes com heranÁa
-			substituiÁ„o de um metodo na classe filha
-				super.funcaoSobrescrita chama funÁ„o sobrescrita 
-			mÈtodos de mesma assinatura
-			boa pr·tica: sobrescreva
+		sobreposi√ß√£o
+			m√∫ltipla forma entre classes com heran√ßa
+			substitui√ß√£o de um metodo na classe filha
+				super.funcaoSobrescrita chama fun√ß√£o sobrescrita 
+			m√©todos de mesma assinatura
+			boa pr√°tica: sobrescreva
 				toString()
 				equals()
-					determina se um objeto tem o mesmo conte˙do do outro
+					determina se um objeto tem o mesmo conte√∫do do outro
 					this.equals(thatRsrsrs);
 				hashCode()
-					se dois objetos retornam hashCode diferentes, eles s„o diferentes
+					se dois objetos retornam hashCode diferentes, eles s√£o diferentes
 					se dois objetos retornam o mesmo hashCode, eles podem ser diferentes
-			Late binding (vinculaÁ„o tardia)
-				conex„o entre o nome de um mÈtodo e o seu cÛdigo/programa
-				quando h· sobreposiÁ„o de mÈtodos, h· um mesmo nome com dois cÛdigos diferentes
-				tipos (como vincular tal nome ao cÛdigo correto?)
-					est·tica
-						quando n„o h· 
-							sobreposiÁ„o de mÈtodos
+			Late binding (vincula√ß√£o tardia)
+				conex√£o entre o nome de um m√©todo e o seu c√≥digo/programa
+				quando h√° sobreposi√ß√£o de m√©todos, h√° um mesmo nome com dois c√≥digos diferentes
+				tipos (como vincular tal nome ao c√≥digo correto?)
+					est√°tica
+						quando n√£o h√° 
+							sobreposi√ß√£o de m√©todos
 							cast
-						compilador da IDE Eclipse sempre usa vinculaÁ„o est·tica
-							o mÈtodo/tipo È vinculado ou mÈtodo/tipo mais generalista
-					din‚mica
-						o mÈtodo especÌfico n„o È confundido pelo mÈtodo genÈrico sobrescrito
-						vinculaÁ„o sÛ ocorre em tempo de execuÁ„o
-				se n„o h· sobreposiÁ„o/cast, a vinculaÁ„o est·tica È idÍntica ‡ din‚mica
+						compilador da IDE Eclipse sempre usa vincula√ß√£o est√°tica
+							o m√©todo/tipo √© vinculado ou m√©todo/tipo mais generalista
+					din√¢mica
+						o m√©todo espec√≠fico n√£o √© confundido pelo m√©todo gen√©rico sobrescrito
+						vincula√ß√£o s√≥ ocorre em tempo de execu√ß√£o
+				se n√£o h√° sobreposi√ß√£o/cast, a vincula√ß√£o est√°tica √© id√™ntica √† din√¢mica
 
 		sobrecarga
-			polimorfismo entre mÈtodos de mesmo nome numa classe
-			cada mÈtodo tem uma assinatura diferente
+			polimorfismo entre m√©todos de mesmo nome numa classe
+			cada m√©todo tem uma assinatura diferente
 
 
 
-refatoraÁ„o
+refatora√ß√£o
 	automaticamente pela IDE
 	consiste em
 		renomear um membro e atualizar o programa para o novo nome
 		extrair 
-			mÈtodo
+			m√©todo
 			classe
 			superclasse
 			interface
@@ -335,23 +336,28 @@ refatoraÁ„o
 			subclasse (pull down)
 			outra classe (move)
 	code smell
-		cÛdigo duplicado
-		mÈtodo longo
-		muitos coment·rios
-		m· modelagem
+		c√≥digo duplicado
+		m√©todo longo
+		muitos coment√°rios
+		m√° modelagem
+
+enumera√ß√µes
+	public static final int CTE_TAL = 4; (massivamente => code smell)
+	classe que representa um conjunto de constantes
+	facilita o lado do programador
+	pode ter atributos e m√©todos como numa classe comum
 
 
-
-classes internas (ci) -- carece exercÌcios pr·ticos
+classes internas (ci) -- carece exerc√≠cios pr√°ticos
 	dentro do escopo da classe externa (ce)
 	pouco usado
 	um objeto da ci tem que estar vinculado ao da ce
-	todos os membros da ce s„o visÌveis a ci
+	todos os membros da ce s√£o vis√≠veis a ci
 	utilidade
- 		sÛ vai ser usada pela classe externa
- 		outras classes n„o poder„o acessar a classe interna
-	classes anÙnimas
-		ou seria objetos anÙnimos?
-		usado quando È certo que sÛ ser· usado um objeto para funÁ„o especÌfica
-		funtalTal(new ClasseTal);
+ 		s√≥ vai ser usada pela classe externa
+ 		outras classes n√£o poder√£o acessar a classe interna
+	classes an√¥nimas
+		ou seria objetos an√¥nimos?
+		usado quando √© certo que s√≥ ser√° usado um objeto para fun√ß√£o espec√≠fica
+		funtalTal(new ClasseTal());
 
