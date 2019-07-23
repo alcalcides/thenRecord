@@ -1,0 +1,75 @@
+ECMAScript   =>  padronização da linguagem Java
+
+tecnologias relacionadas
+    nodejs
+        interpretador JavaScript
+        independência do navegador
+    jQuery
+        biblioteca
+    angula
+        google
+        aplicações web
+        mais declarativa
+    react
+        facebook
+        eq ao angula
+    react native
+        mobile
+    vue
+        melhoria do angular
+    electron
+        github
+        interfaces gráficas
+        VS Code 
+    ionic
+        SDK 
+    cordova
+    jogos
+        phaser
+        PixiJS
+        impact
+        melon.js 
+        craftyJS
+                
+
+window.alert    =>  janela de aviso
+window.prompt    =>  janela com um formulário
+window.confirm    =>  janela com aviso e botões de OK e CANCEL
+
+comentário
+    //  =>  linha a linha
+    /*   */  =>  bloco de linhas comentado
+
+comandos
+    não precisa mais terminar com ; (ponto-e-vírgula)
+
+dados
+    var tal = 10
+    identificadores
+        case sensitive
+        não
+            number
+            espaço
+            palavras reservadas
+        começa com 
+            _
+            %
+            letra
+        suporta caracteres
+            alfanumérico
+            acentos
+            símbolos
+    variaveis não tipadas
+        number  
+            Infinity
+            NaN
+        string
+        boolean
+        undefined
+        object
+            arry
+            null (nada)
+        function
+    var/let
+    typeof
+        retorna o tipo de dado na variável
