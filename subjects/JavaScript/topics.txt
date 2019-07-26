@@ -6,13 +6,13 @@ tecnologias relacionadas
         independência do navegador
     jQuery
         biblioteca
-    angula
+    angular
         google
         aplicações web
         mais declarativa
     react
         facebook
-        eq ao angula
+        eq ao angular
     react native
         mobile
     vue
@@ -32,9 +32,10 @@ tecnologias relacionadas
         craftyJS
                 
 
-window.alert    =>  janela de aviso
-window.prompt    =>  janela com um formulário
-window.confirm    =>  janela com aviso e botões de OK e CANCEL
+hello world
+    window.alert    =>  janela de aviso
+    window.prompt    =>  janela com um formulário
+    window.confirm    =>  janela com aviso e botões de OK e CANCEL
 
 comentário
     //  =>  linha a linha
@@ -59,17 +60,23 @@ dados
             alfanumérico
             acentos
             símbolos
-    variaveis não tipadas
-        number  
-            Infinity
-            NaN
-        string
-        boolean
-        undefined
-        object
-            arry
-            null (nada)
-        function
-    var/let
+    variáveis 
+        não tipadas
+        primitivas
+            number  
+                Infinity
+                NaN
+            string
+            boolean
+        não primitivas
+            undefined
+            object
+                array
+                null (nada)
+            function
+    var/let/const
     typeof
         retorna o tipo de dado na variável
+
+operador
+    +   de concatenação 
