@@ -1,2 +1,2 @@
 Every new language demand lots of memory to its syntax and semantic rules, so I decided record every new sentence in a simple text file full of comments (but not spamy) in order to I be able to come back wherever and reopen, seek the forgotten command and "Ctrl+C; Ctrl+V". 
-A new language programming, a new file. A new knowledge, a new line. Forever, even after my retirement. That will help me a lot. Not you? Sorry, but set others free.
+A new language programming, a new file. A new knowledge, a new line. Forever, even after my retirement. That will help me a lot. Not you? Sorry, but set others free, ok?

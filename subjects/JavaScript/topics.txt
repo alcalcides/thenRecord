@@ -30,12 +30,6 @@ tecnologias relacionadas
         impact
         melon.js 
         craftyJS
-                
-
-hello world
-    window.alert    =>  janela de aviso
-    window.prompt    =>  janela com um formulário
-    window.confirm    =>  janela com aviso e botões de OK e CANCEL
 
 comentário
     //  =>  linha a linha
@@ -68,7 +62,7 @@ dados
                 NaN
             string
             boolean
-        não primitivas
+        não primitiv`${variavel}`as
             undefined
             object
                 array
@@ -78,5 +72,16 @@ dados
     typeof
         retorna o tipo de dado na variável
 
-operador
-    +   de concatenação 
+operadores
+    strin + string
+        concatenação 
+    number + number
+        adição    
+    
+template string 
+    alternativa ao uso de " e '
+    `início e fim com crase`
+    placeholder
+        incorporar variáveis
+        ${variavel}
+    `olá, ${user}!`

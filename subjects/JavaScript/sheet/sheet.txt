@@ -1,0 +1,31 @@
+window.alert('mensagem')
+window.prompt('mensagem')
+window.confirm('mensagem')
+
+var tal = 5
+tal = 5
+typeof(tal)
+window.alert('oi, ' + nome)
+
+Number.parserInt(tal)
+Number.parserFloat(tal)
+Number(tal)
+String(tal)
+tal.toString()
+
+`Hello, ${user}`
+'<br>'
+"<br>"
+`<br>`
+document.write("algo")
+
+nome.length
+nome.toUpperCase()
+nome.toLowerCase()
+
+num.toFixed(2)
+num.toFixed(2).replace('.', ',')
+num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+num.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+num.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}).replace(",", "A" ).replace(".", ",").replace("A", ".")

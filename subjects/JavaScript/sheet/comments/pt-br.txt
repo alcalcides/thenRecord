@@ -1,0 +1,31 @@
+janela de aviso, retorna a string
+janela com um formulário, retorna a string
+janela com aviso e botões de OK e CANCEL, retorna a string
+
+atribuição padrão para variáveis
+idem
+retorna o tipo de variável: number, string etc
+concatenação de strings
+
+retorna o inteiro convertido
+retorna o float convertido
+retorna valor numérico no tipo mais genérico necessário
+retorna a string convertida
+idem
+
+incorporação de variáveis em uma string
+incorpora tags HTML
+idem
+idem
+retorna string "algo" para o nível html
+
+retorna o tamanho da string
+retorna a string com todas as letras maiúsculas
+retorna a string com todas as letras minúsculas
+
+retorna string equivalente ao número com duas casas decimais
+idem mas troca o ponto por vírgula para o padrão brasileiro
+retorna string equivalente à expressão monetária brasileira
+retorna string equivalente à expressão monetária estadunidense
+retorna string equivalente à expressão monetária europeia
+faz o serviço completo para brasileiros (carece melhorias)
