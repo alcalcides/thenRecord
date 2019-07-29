@@ -38,8 +38,9 @@ comentário
 comandos
     não precisa mais terminar com ; (ponto-e-vírgula)
 
-dados
-    var tal = 10
+variáveis
+    declaração
+        var/let/const tal = 10
     identificadores
         case sensitive
         não
@@ -54,7 +55,7 @@ dados
             alfanumérico
             acentos
             símbolos
-    variáveis 
+    classificação 
         não tipadas
         primitivas
             number  
@@ -62,22 +63,15 @@ dados
                 NaN
             string
             boolean
-        não primitiv`${variavel}`as
+        não primitivas
             undefined
             object
                 array
                 null (nada)
             function
-    var/let/const
     typeof
         retorna o tipo de dado na variável
 
-operadores
-    strin + string
-        concatenação 
-    number + number
-        adição    
-    
 template string 
     alternativa ao uso de " e '
     `início e fim com crase`
@@ -85,3 +79,37 @@ template string
         incorporar variáveis
         ${variavel}
     `olá, ${user}!`
+
+operadores
+    aritméticos
+        adição (+)
+            number + number
+        subtração (-)
+        multiplicação (*)
+        divisão (/)
+            retorna o float
+        resto (%)
+        potencialização (**)
+        concatenação (+)
+            string + string
+        inc/decremento
+            ++/--
+            pré-in/decremento
+    de atribuição (=)
+        variável = expressão
+    relacionais
+    lógicos 
+    ternário
+    composto
+        +=
+        -=
+        *=
+        /=
+        **=
+        %=
+
+precedência de operadores  
+    ()
+    **
+    * / %
+    + -

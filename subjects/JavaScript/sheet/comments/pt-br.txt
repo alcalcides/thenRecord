@@ -29,3 +29,6 @@ retorna string equivalente à expressão monetária brasileira
 retorna string equivalente à expressão monetária estadunidense
 retorna string equivalente à expressão monetária europeia
 faz o serviço completo para brasileiros (carece melhorias)
+
+incrementa e retorna 11 (pré-incremento)
+retorna 10 e depois incrementa (pós-incremento)
