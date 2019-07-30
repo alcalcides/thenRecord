@@ -98,8 +98,41 @@ operadores
     de atribuição (=)
         variável = expressão
     relacionais
+        retorna sempre um booleano
+        quais
+            >
+            <
+            >=
+            <=
+            ==
+                não testa o tipo, só o valor
+            === 
+                testa o tipo e o valor
+                idêntico
+            !=
+            !== 
+                testa o tipo e o valor
+                desigual restrito
+
     lógicos 
+        retorna sempre um booleano
+        quais
+            !
+                negação
+                unário
+                !true > false
+            &&
+                conjunção
+                "e"
+                binário
+            ||
+                pipe
+                disjunção 
+                "ou"
+                binário
     ternário
+        teste lógico + atribuição dependente
+        (expressão booleana) ? (valor para true) : (valor para false)
     composto
         +=
         -=
@@ -113,3 +146,42 @@ precedência de operadores
     **
     * / %
     + -
+    operadores relacionais (da esquerda pra direita)
+    ! && ||
+
+DOM 
+    Docment object model
+    Recursos do navegador para JavaScript
+    Elementos
+        window (janela, documento)
+            location (url)
+            document
+                html
+                    head
+                        meta
+                        title
+                        ***
+                    body
+                        h1
+                        p 
+                        *** (o que se aplicar)
+                write
+                    método para inserir caracteres no html
+                    write("meu texto")
+                    insere no local onde há o script
+            history (histórico de navegação do cliente)
+            ***
+    Selecionando elementos por 
+        Marca/tag
+            getElementsByTagName() 
+        id 
+            getElementById()
+            id só deve retornar um elemento
+        nome
+            getElementsByName()
+        classe
+            getElementsByClassName()
+        seletor
+            querySelector('seletor css')
+            querySelectorAll('seletor css')
+                retorna vetor de elementos

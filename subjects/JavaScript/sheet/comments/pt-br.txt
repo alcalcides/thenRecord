@@ -32,3 +32,22 @@ faz o serviço completo para brasileiros (carece melhorias)
 
 incrementa e retorna 11 (pré-incremento)
 retorna 10 e depois incrementa (pós-incremento)
+retorna falso, pois 4>5 é falso.
+retorna true, pois == não é tipado
+retorna false, pois === verifica o tipo de dado
+retorna false, pois 5 e '5' são iguais no valor
+retorna true, pois 5 e '5' são de tipos distintos
+x = 6
+
+insere "bla bla bla " no documento html
+escreve a url completa da página
+retorna o vetor de elementos cuja tag tem id="idTal"
+retorna o vetor de elementos cuja tag tem name="nameTal"
+retorna o vetor de elementos cuja tag tem class="classTal"
+retorna o elemento cujo id é idTal
+retorna o vetor de elementos html cuja tag é p (parágrafos)
+guarda esse vetor em "tal"
+retorna a string do primeiro parágrafo
+retorna string com o conteúdo literal do elemento tal (só os caracteres)
+retorna string com suas tags e demais propriedades herdadas
+configura o elemento tal para ter o css color = green

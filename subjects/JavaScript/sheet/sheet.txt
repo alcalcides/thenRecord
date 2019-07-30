@@ -32,3 +32,22 @@ num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}).replace(",", "
 
 var n=10; ++n
 var n=10; n++
+4 > 2+3
+5 == '5'
+5 === '5'
+5 != '5'
+5 !== '5'
+var x = 5 > 6 ? 5 : 6
+
+window.document.write("bla bla bla ")
+window.document.write(window.document.URL)
+window.document.getElementsById('idTal')
+window.document.getElementsByName('nameTal')
+window.document.getElementsByClassName('classTal')
+window.document.querySelector('p#idTal')
+window.document.getElementsByTagName('p')
+var tal = window.document.getElementsByTagName('p')
+window.document.getElementsByTagName('p')[0]
+document.write(tal.innerText)
+document.write(tal.innerHTML)
+tal.style.color = green
