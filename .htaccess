@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteBase /
+
+#DirectoryIndex /site/view/home.php [NC, L]
+
+#RewriteRule ^home$ /hworldsheet/site/view/home.php [NC, L]
+#RewriteRule ^conteudo$ /site/view/conteudo.php [NC, L]
+#RewriteRule ^contato$ /site/view/contato.php [NC,L]

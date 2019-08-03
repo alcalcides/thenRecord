@@ -1,4 +1,6 @@
 structure.txt 
 *unir*
 site*
-
+.project
+.settings/
+*temp*
