@@ -50,4 +50,21 @@ guarda esse vetor em "tal"
 retorna a string do primeiro parágrafo
 retorna string com o conteúdo literal do elemento tal (só os caracteres)
 retorna string com suas tags e demais propriedades herdadas
-configura o elemento tal para ter o css color = green
+configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
+
+mais simples função em javaScript
+
+
+
+ligação html/javaScript pelo html
+
+
+
+
+ligação html/javaScript pelo html
+
+
+
+
+
+

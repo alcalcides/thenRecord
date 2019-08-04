@@ -50,4 +50,21 @@ var tal = window.document.getElementsByTagName('p')
 window.document.getElementsByTagName('p')[0]
 document.write(tal.innerText)
 document.write(tal.innerHTML)
-tal.style.color = green
+tal[0].style.color = 'green'
+
+function nometal(){
+    //bla bla bla
+}
+
+<div id="tal" onclick='funcaoTal()'><p>HelloWorld!</p></div>
+<script>
+    funcaoTal(){//bla bla bla}
+</script>
+
+<div id="tal"'><p>HelloWorld!</p></div>
+<script>
+    var tal = document.getElementById('tal')
+    tal.addEventListener('click', funcaoTal)
+    function funcaoTal(){//bla bla bla}
+</script>
+

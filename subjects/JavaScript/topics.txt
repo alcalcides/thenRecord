@@ -185,3 +185,27 @@ DOM
             querySelector('seletor css')
             querySelectorAll('seletor css')
                 retorna vetor de elementos
+    Eventos 
+        mouse
+            mouseenter
+                cursor entrou no elemento
+            mousemove
+                cursor se movendo dentro do elemento 
+            mousedown
+                botão esquerdo acionado (dentro do elemento?)
+            mouseup
+                botão esquerdo do mouse liberado (dentro do elemento?)
+            click
+                rapido aperto do botão esquerdo (dentro do elemento?)
+            mouseout
+                cursor saiu do elemento
+
+funções
+    bloco de código {dentro das chaves}
+    function nometal(parametros){}
+    ligação html JavaScript
+        pelo html
+            eventoTal = "fucaoTal()"
+        pelo JavaScript (listeners)
+            var tal = document.getElementById("tal")
+            tal.addEventListener('nomeDoEvento', nomeDaFuncao)
