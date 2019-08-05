@@ -51,6 +51,9 @@ retorna a string do primeiro parágrafo
 retorna string com o conteúdo literal do elemento tal (só os caracteres)
 retorna string com suas tags e demais propriedades herdadas
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
+cria elemento html <img> e guarda sua referência em tal2
+equivale a incluir class='grande' no elemento html
+insere elemento html tal2 após o elemento tal
 
 mais simples função em javaScript
 

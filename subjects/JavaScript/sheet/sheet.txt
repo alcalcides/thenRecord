@@ -51,6 +51,9 @@ window.document.getElementsByTagName('p')[0]
 document.write(tal.innerText)
 document.write(tal.innerHTML)
 tal[0].style.color = 'green'
+tal2 = document.createElement('img')
+tal2.setAtribute('class', 'grande')
+tal[0].appendChild(tal2)
 
 function nometal(){
     //bla bla bla
