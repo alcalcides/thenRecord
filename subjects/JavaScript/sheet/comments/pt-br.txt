@@ -68,3 +68,16 @@ ligação html/javaScript pelo html
 
 
 
+escreve na tela de console (nodeJS)
+condição simples
+
+condição composta
+
+
+condições aninhadas
+
+só entra aqui se tal estiver entre 5 e 16
+
+tal recebe os dados horários
+retorna o horário
+retorna número de 0-6 para Domingo-Sábado

@@ -199,6 +199,8 @@ DOM
                 rapido aperto do botão esquerdo (dentro do elemento?)
             mouseout
                 cursor saiu do elemento
+            onload
+                quando o elemento for carregado
 
 funções
     bloco de código {dentro das chaves}
@@ -209,3 +211,22 @@ funções
         pelo JavaScript (listeners)
             var tal = document.getElementById("tal")
             tal.addEventListener('nomeDoEvento', nomeDaFuncao)
+
+controle de fluxo
+    condição simples
+        if(condição) {//bla bla bla}
+    condição composta
+        if (condição) {//bla bla bla}
+        else {//bla bla bla}
+    condições aninhadas
+        if(){}
+        else if(){}
+        else{}
+    condições múltiplas
+        switch(expressão){
+            case 0:
+                //bla bla bla
+                break
+            case 1:....
+            default:....
+        }

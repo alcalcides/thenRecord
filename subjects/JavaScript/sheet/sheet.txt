@@ -68,3 +68,16 @@ function nometal(){
     function funcaoTal(){//bla bla bla}
 </script>
 
+console.log("mensagem")
+if(tal > 12) {console.log("você já é um adolescente")}
+
+if(tal > 12) {console.log("você já é um adolescente")}
+else{console.log("você ainda é uma criança")}
+
+if(tal > 16){}
+else if(tal < 5 ){}
+else{}
+
+var tal = new Date()
+tal.getHours()
+tal.getDay()

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="pt-BR">
 <meta charset="UTF-8">
 <title>Conteúdo | hWorldSheet</title>
 </head>
