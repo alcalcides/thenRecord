@@ -48,8 +48,8 @@ window.document.querySelector('p#idTal')
 window.document.getElementsByTagName('p')
 var tal = window.document.getElementsByTagName('p')
 window.document.getElementsByTagName('p')[0]
-document.write(tal.innerText)
-document.write(tal.innerHTML)
+tal.innerText = 'meu texto'
+tal.innerHTML = "<h2>Meu texto</h2>"
 tal[0].style.color = 'green'
 tal2 = document.createElement('img')
 tal2.setAtribute('class', 'grande')

@@ -48,8 +48,8 @@ retorna o elemento cujo id é idTal
 retorna o vetor de elementos html cuja tag é p (parágrafos)
 guarda esse vetor em "tal"
 retorna a string do primeiro parágrafo
-retorna string com o conteúdo literal do elemento tal (só os caracteres)
-retorna string com suas tags e demais propriedades herdadas
+configura o conteúdo do elemento
+idem com suporte a tags HTML
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
 cria elemento html <img> e guarda sua referência em tal2
 equivale a incluir class='grande' no elemento html
