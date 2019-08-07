@@ -41,6 +41,9 @@ comandos
 variáveis
     declaração
         var/let/const tal = 10
+        let 
+            let a = 5
+            a não existirá fora do escopo
     identificadores
         case sensitive
         não
@@ -213,20 +216,30 @@ funções
             tal.addEventListener('nomeDoEvento', nomeDaFuncao)
 
 controle de fluxo
-    condição simples
-        if(condição) {//bla bla bla}
-    condição composta
-        if (condição) {//bla bla bla}
-        else {//bla bla bla}
-    condições aninhadas
-        if(){}
-        else if(){}
-        else{}
-    condições múltiplas
-        switch(expressão){
-            case 0:
-                //bla bla bla
-                break
-            case 1:....
-            default:....
-        }
+    estruturas de condição
+        condição simples
+            if(condição) {//bla bla bla}
+        condição composta
+            if (condição) {//bla bla bla}
+            else {//bla bla bla}
+        condições aninhadas
+            if(){}
+            else if(){}
+            else{}
+        condições múltiplas
+            switch(expressão){
+                case 0:
+                    //bla bla bla
+                    break
+                case 1:....
+                default:....
+            }
+    estruturas de repetição (laços)
+        teste lógico no início
+            while(expressão){  }
+        teste lógico no final
+            do {} while()
+        com variável de controle
+            auto-incrento
+            usado quando se sabe a qtd de iterações
+            for (inicio; teste; incremento) {}

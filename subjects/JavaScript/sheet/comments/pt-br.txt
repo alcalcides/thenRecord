@@ -10,6 +10,7 @@ concatenação de strings
 retorna o inteiro convertido
 retorna o float convertido
 retorna valor numérico no tipo mais genérico necessário
+idem para elementos de texto
 retorna a string convertida
 idem
 
@@ -17,6 +18,7 @@ incorporação de variáveis em uma string
 incorpora tags HTML
 idem
 idem
+imprime caractere especial UNICODE
 retorna string "algo" para o nível html
 
 retorna o tamanho da string
@@ -51,6 +53,7 @@ retorna a string do primeiro parágrafo
 configura o conteúdo do elemento
 idem com suporte a tags HTML
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
+testa se o elemento está vazio, sem letras
 cria elemento html <img> e guarda sua referência em tal2
 equivale a incluir class='grande' no elemento html
 insere elemento html tal2 após o elemento tal
@@ -84,3 +87,7 @@ só entra aqui se tal estiver entre 5 e 16
 tal recebe os dados horários
 retorna o horário
 retorna número de 0-6 para Domingo-Sábado
+
+repete 5 vezes
+idem com teste no início
+idem com variável de controle

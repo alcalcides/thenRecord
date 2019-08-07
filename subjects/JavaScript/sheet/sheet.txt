@@ -10,13 +10,15 @@ window.alert('oi, ' + nome)
 Number.parserInt(tal)
 Number.parserFloat(tal)
 Number(tal)
+Number(tal.value)
 String(tal)
 tal.toString()
 
 `Hello, ${user}`
 '<br>'
 "<br>"
-`<br>`
+`<b>`
+`\u{1F609}`
 document.write("algo")
 
 nome.length
@@ -51,6 +53,7 @@ window.document.getElementsByTagName('p')[0]
 tal.innerText = 'meu texto'
 tal.innerHTML = "<h2>Meu texto</h2>"
 tal[0].style.color = 'green'
+tal[0].value.length == 0
 tal2 = document.createElement('img')
 tal2.setAtribute('class', 'grande')
 tal[0].appendChild(tal2)
@@ -84,3 +87,7 @@ else{}
 var tal = new Date()
 tal.getHours()
 tal.getDay()
+
+var c = 0; while(c<5){c++; console.log("oi");}
+var c = 0; do {c++; console.log("oi");} while(c<5)
+for(var d = 0; d < 5; d++){console.log("oi")}
