@@ -91,3 +91,14 @@ tal.getDay()
 var c = 0; while(c<5){c++; console.log("oi");}
 var c = 0; do {c++; console.log("oi");} while(c<5)
 for(var d = 0; d < 5; d++){console.log("oi")}
+
+let nums = []
+let nums = [5, 6, 7]
+conlose.log(nums)
+nums.indexOf(6)
+nums.add(3) = 8
+nums.push(1000)
+nums.length
+nums.sort()
+for(let i = 0; i < nums.length; i++){console.log(nums[i])}
+for(let i in nums){}

@@ -91,3 +91,14 @@ retorna número de 0-6 para Domingo-Sábado
 repete 5 vezes
 idem com teste no início
 idem com variável de controle
+
+declaração de um vetor
+idem e já inicializa
+retorna 5,6,7
+retorna 1, que é o índice do valor 6 no vetor. Retorna -1 na ausência.
+insere o valor 8 na posição 3 do vetor. Se não há essa posição, aloca-se mais espaço até haver o índice determinado.
+insere o valor 1000 na última posição disponível
+retorna quantidade de elementos alocados
+ordena o vetor na ordem 
+retorna os valores de num concatenados
+varre a variável composta

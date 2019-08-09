@@ -243,3 +243,10 @@ controle de fluxo
             auto-incrento
             usado quando se sabe a qtd de iterações
             for (inicio; teste; incremento) {}
+
+variáveis compostas
+    armazenam vários valores na mesma estrutura
+    cada elemento tem
+        índice
+        valor
+        
