@@ -50,6 +50,7 @@ window.document.querySelector('p#idTal')
 window.document.getElementsByTagName('p')
 var tal = window.document.getElementsByTagName('p')
 window.document.getElementsByTagName('p')[0]
+tal.focus()
 tal.innerText = 'meu texto'
 tal.innerHTML = "<h2>Meu texto</h2>"
 tal[0].style.color = 'green'
@@ -102,3 +103,34 @@ nums.length
 nums.sort()
 for(let i = 0; i < nums.length; i++){console.log(nums[i])}
 for(let i in nums){}
+let vet = [5, 'G', 'palavra', 9.4]
+
+function sum(a, b){return a + b}
+function sum(a, b=0){return a + b}
+function sum(a=0, b=0){return a + b}
+
+var x = function(a, b) {return a+b}
+console.log(x(2,4))
+console.log(x('hello', ' world'))
+
+let elemento = document.querySelector('div#ele')
+let novato = document.createElement('p')
+novato.text = 'mais conteudo'
+elemento.appendChild(novato)
+
+let x = function somar(a, b){return a+b}
+let vet = [5, 'eu mesmo', x]
+conlose.log(typeof(vet[0]))
+conlose.log(typeof(vet[2]))
+conlose.log(vet[2](3, 5))
+
+let obj = {
+    nome: 'elis' ,
+    idade: 15 ,
+    fazerAniversario(){
+        this.idade++
+    }
+}
+obj.nome
+obj.idade
+obj.fazerAniversario()

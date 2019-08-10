@@ -249,4 +249,28 @@ variáveis compostas
     cada elemento tem
         índice
         valor
+    vetores
+        ok dados heterogêneos
+            inclusive funções
+        []
+        no fundo é um objeto
+    objetos
+        índices configuráveis
+        ok dados heterogêneos
+            inclusive funções
         
+        
+funções
+    conjunto de códigos 
+    nome
+        usado para instanciar
+    mecanismo
+        chamada da função
+        entrega de parâmetros reais
+        execução da função
+        retorno de valores
+    declaração de funções  
+        nome
+        parâmetros formais
+        bloco de códigos
+        expressão de retorno

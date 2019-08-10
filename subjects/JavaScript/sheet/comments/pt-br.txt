@@ -50,6 +50,7 @@ retorna o elemento cujo id é idTal
 retorna o vetor de elementos html cuja tag é p (parágrafos)
 guarda esse vetor em "tal"
 retorna a string do primeiro parágrafo
+ativa o cursor no elemento
 configura o conteúdo do elemento
 idem com suporte a tags HTML
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
@@ -102,3 +103,34 @@ retorna quantidade de elementos alocados
 ordena o vetor na ordem 
 retorna os valores de num concatenados
 varre a variável composta
+vetores em javaScript admitem dados heterogêneos
+
+função com parâmetros
+valores default
+todos os parâmetros com valores default
+
+a variável x guarda a abstração da função
+instaciação da função em x. Retorna 6
+retorna 'hello world'
+
+sequência para criar elementos html dinamicamente
+
+
+
+
+
+vetor de dados heterogêneos
+retorna number
+retorna function
+retorna 8
+
+criação de objeto obj 
+
+
+
+
+
+
+retorna "elis"
+retorna 15
+modifica o campo idade para 16
