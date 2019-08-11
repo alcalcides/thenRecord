@@ -37,6 +37,9 @@ comentário
 
 comandos
     não precisa mais terminar com ; (ponto-e-vírgula)
+    local html
+        dentro do head
+        último elemento antes do fechamento da tag body
 
 variáveis
     declaração
@@ -252,12 +255,14 @@ variáveis compostas
     vetores
         ok dados heterogêneos
             inclusive funções
-        []
+        variável[indice]
         no fundo é um objeto
     objetos
         índices configuráveis
         ok dados heterogêneos
             inclusive funções
+        objeto.campo
+        reune todas as propriedades dentro da estrutura
         
         
 funções
@@ -274,3 +279,6 @@ funções
         parâmetros formais
         bloco de códigos
         expressão de retorno
+    globais
+        console.log()
+            transfere dados para o console 
