@@ -5,8 +5,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteBase /
 
-#DirectoryIndex /site/view/home.php [NC, L]
-
-#RewriteRule ^home$ /hworldsheet/site/view/home.php [NC, L]
-#RewriteRule ^conteudo$ /site/view/conteudo.php [NC, L]
-#RewriteRule ^contato$ /site/view/contato.php [NC,L]
+RewriteRule ^home$ /hworldsheet/site/view/home.php [L]
+RewriteRule ^conteudo$ /hworldsheet/site/view/conteudo.php [L]

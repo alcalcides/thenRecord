@@ -1,4 +1,4 @@
 <nav>
-	<a href="/hworldsheet/">Home</a>
-	<a href="/hworldsheet/conteudo.php">Conteúdo</a>
+	<a href="home">Home</a>
+	<a href="conteudo">Conteúdo</a>
 </nav>
