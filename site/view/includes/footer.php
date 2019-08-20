@@ -1,3 +1,4 @@
 <footer>
-Página web em construção!	
+    <p>Site em construção</p>
+    <p>Todos os direitos reservados</p>
 </footer>
