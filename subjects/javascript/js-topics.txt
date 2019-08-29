@@ -62,7 +62,9 @@ variáveis
             acentos
             símbolos
     classificação 
-        não tipadas
+        não tipadas (ou tipagem dinâmica)
+            typeof
+                retorna o tipo de dado na variável
         primitivas
             number  
                 Infinity
@@ -75,8 +77,6 @@ variáveis
                 array
                 null (nada)
             function
-    typeof
-        retorna o tipo de dado na variável
 
 template string 
     alternativa ao uso de " e '
@@ -282,3 +282,11 @@ funções
     globais
         console.log()
             transfere dados para o console 
+
+funções controladoras no tempo
+    setInterval(string nomeDaFuncao, int xMilisegundos)
+        a cada x milisegundos, a função nomeDaFuncao é chamada
+        rederização de interfaces
+    setTimeout(string nomeDaFuncao, int xMilisegundos)
+        após x milisegundos a função é chamada
+        redirecionamentos automáticos

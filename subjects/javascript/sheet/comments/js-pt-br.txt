@@ -2,10 +2,15 @@ janela de aviso, retorna a string
 janela com um formulário, retorna a string
 janela com aviso e botões de OK e CANCEL, retorna a string
 
-atribuição padrão para variáveis
-idem
+declaração e inicialização de variáveis
+atribuição a uma variável já declarada
 retorna o tipo de variável: number, string etc
-concatenação de strings
+concatenação de string com qualquer outro tipo
+tipo string
+tipo inteiro
+tipo ponto flutuante
+tipo boolean
+
 
 retorna o inteiro convertido
 retorna o float convertido
@@ -40,6 +45,7 @@ retorna false, pois === verifica o tipo de dado
 retorna false, pois 5 e '5' são iguais no valor
 retorna true, pois 5 e '5' são de tipos distintos
 x = 6
+x recebe boolean true
 
 insere "bla bla bla " no documento html
 escreve a url completa da página
@@ -76,6 +82,7 @@ ligação html/javaScript pelo html
 
 
 escreve na tela de console (nodeJS)
+escreve os dois argumentos, lado a lado
 condição simples
 
 condição composta
@@ -84,6 +91,17 @@ condição composta
 condições aninhadas
 
 só entra aqui se tal estiver entre 5 e 16
+
+condições múltiplas
+
+
+
+
+
+
+
+
+
 
 tal recebe os dados horários
 retorna o horário
@@ -134,3 +152,7 @@ criação de objeto obj
 retorna "elis"
 retorna 15
 modifica o campo idade para 16
+
+A cada 1000 milissegundos (1 segundo) a função obj.fazerAniversario() é chamada
+Chama-se a função obj.fazerAniversario() e pronto
+Depois de 5000 milissegundos (5 segundos) a função é chamada
