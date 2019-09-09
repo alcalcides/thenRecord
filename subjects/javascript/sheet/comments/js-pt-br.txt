@@ -1,3 +1,4 @@
+incorpora scripts JavaScript no HTML, boa prática
 janela de aviso, retorna a string
 janela com um formulário, retorna a string
 janela com aviso e botões de OK e CANCEL, retorna a string
@@ -50,9 +51,10 @@ x recebe boolean true
 insere "bla bla bla " no documento html
 escreve a url completa da página
 retorna o vetor de elementos cuja tag tem id="idTal"
-retorna o vetor de elementos cuja tag tem name="nameTal"
-retorna o vetor de elementos cuja tag tem class="classTal"
+retorna o vetor de elementos cuja tag tem name="nameTal", equivale a *[name=nameTal]
+retorna o vetor de elementos cuja tag tem class="classTal", equivale a *[class=classTal]
 retorna o elemento cujo id é idTal
+retorna vetor com todos os parágrafos cuja classe é classTal
 retorna o vetor de elementos html cuja tag é p (parágrafos)
 guarda esse vetor em "tal"
 retorna a string do primeiro parágrafo
@@ -62,8 +64,15 @@ idem com suporte a tags HTML
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
 testa se o elemento está vazio, sem letras
 cria elemento html <img> e guarda sua referência em tal2
+atribuiu a propriedade
 equivale a incluir class='grande' no elemento html
 insere elemento html tal2 após o elemento tal
+retorna a string
+cria um elemento <a></a>
+define propriedade href
+define propriedade target
+faz o elemento sss ser filho do linkk
+deleta o elemento filho sss do linkk
 
 mais simples função em javaScript
 
@@ -74,14 +83,15 @@ ligação html/javaScript pelo html
 
 
 
-ligação html/javaScript pelo html
+ligação html/javaScript pelo JavaScript
 
 
 
 
 
 
-escreve na tela de console (nodeJS)
+
+escreve na tela de console (funciona no console nodeJS)
 escreve os dois argumentos, lado a lado
 condição simples
 

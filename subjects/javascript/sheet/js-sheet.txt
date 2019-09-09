@@ -1,3 +1,4 @@
+<script src="arquivoTal.js"></script>
 window.alert('mensagem')
 window.prompt('mensagem')
 window.confirm('mensagem')
@@ -53,6 +54,7 @@ window.document.getElementsById('idTal')
 window.document.getElementsByName('nameTal')
 window.document.getElementsByClassName('classTal')
 window.document.querySelector('p#idTal')
+window.document.querySelectorAll('p.classTal')
 window.document.getElementsByTagName('p')
 var tal = window.document.getElementsByTagName('p')
 window.document.getElementsByTagName('p')[0]
@@ -62,8 +64,15 @@ tal.innerHTML = "<h2>Meu texto</h2>"
 tal[0].style.color = 'green'
 tal[0].value.length == 0
 tal2 = document.createElement('img')
+tal2.alt = 'alguma coisa'
 tal2.setAtribute('class', 'grande')
 tal[0].appendChild(tal2)
+var sss = document.createTextNode('Clique aqui')
+var linkk = document.createElement('a')
+linkk.href = 'www.google.com'
+linkk.setAttribute('target', '_blank')
+linkk.appendChild(sss)
+linkk.removeChild(sss)
 
 function nometal(){
     //bla bla bla
@@ -78,6 +87,7 @@ function nometal(){
 <script>
     var tal = document.getElementById('tal')
     tal.addEventListener('click', funcaoTal)
+    tal.onclick = funcaoTal();
     function funcaoTal(){//bla bla bla}
 </script>
 
