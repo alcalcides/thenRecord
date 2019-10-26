@@ -10,6 +10,7 @@ ssh-keygen
 git remote -v 
 git push origin master 
 git pull origin master 
+git pull --allow-unrelated-histories
 git fetch origin <branchName> 
 git status 
 

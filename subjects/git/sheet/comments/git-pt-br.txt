@@ -10,6 +10,7 @@ cria chave ssh numa estação para usar no github.com
 lista os nomes dos repositórios 
 repositório recebe o que está no ramo master do repositório local
 atualiza ramo master local com o arquivos modificados no repositório
+idem para quando há alterações locais não sincronizadas com o repositório remoto
 atualiza ramo local <branchName> com o arquivos modificados no repositório
 exibe arquivos modificados no diretório de trabalho
 
