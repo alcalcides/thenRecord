@@ -91,6 +91,7 @@ ligação html/javaScript pelo JavaScript
 
 
 
+
 escreve na tela de console (funciona no console nodeJS)
 escreve os dois argumentos, lado a lado
 condição simples
@@ -116,6 +117,7 @@ condições múltiplas
 tal recebe os dados horários
 retorna o horário
 retorna número de 0-6 para Domingo-Sábado
+
 
 repete 5 vezes
 idem com teste no início
@@ -152,7 +154,7 @@ retorna number
 retorna function
 retorna 8
 
-criação de objeto obj 
+criação de objeto obj com 3 membros
 
 
 

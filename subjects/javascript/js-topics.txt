@@ -46,7 +46,11 @@ variáveis
         var/let/const tal = 10
         let 
             let a = 5
-            a não existirá fora do escopo
+            a não existirá fora do bloco 
+            preferencial em relação ao var
+        var 
+            útil para variáveis globais
+            disponível dentro do escopo
     identificadores
         case sensitive
         não
@@ -73,9 +77,13 @@ variáveis
             boolean
         não primitivas
             undefined
+                equivalente ao booleano false
+                equivalente ao NaN
             object
                 array
                 null (nada)
+                    equivale ao booleano falso
+                    equivale ao numérico 0
             function
 
 template string 
@@ -99,7 +107,8 @@ operadores
         concatenação (+)
             string + string
         inc/decremento
-            ++/--
+            ++
+            --
             pré-in/decremento
     de atribuição (=)
         variável = expressão
@@ -202,7 +211,7 @@ DOM
             mouseup
                 botão esquerdo do mouse liberado (dentro do elemento?)
             click
-                rapido aperto do botão esquerdo (dentro do elemento?)
+                rápido aperto do botão esquerdo (dentro do elemento?)
             mouseout
                 cursor saiu do elemento
             onload

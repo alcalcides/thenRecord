@@ -83,12 +83,13 @@ function nometal(){
     funcaoTal(){//bla bla bla}
 </script>
 
-<div id="tal"'><p>HelloWorld!</p></div>
+<div id="tal"><p>HelloWorld!</p></div>
 <script>
     var tal = document.getElementById('tal')
     tal.addEventListener('click', funcaoTal)
-    tal.onclick = funcaoTal();
-    function funcaoTal(){//bla bla bla}
+    function funcaoTal(){
+        //bla bla bla
+    }
 </script>
 
 console.log("mensagem")
@@ -117,8 +118,9 @@ var tal = new Date()
 tal.getHours()
 tal.getDay()
 
-var c = 0; while(c<5){c++; console.log("oi");}
-var c = 0; do {c++; console.log("oi");} while(c<5)
+var c = 0
+while(c<5){c++; console.log("oi");}
+do {c++; console.log("oi");} while(c<5)
 for(var d = 0; d < 5; d++){console.log("oi")}
 
 let nums = []
