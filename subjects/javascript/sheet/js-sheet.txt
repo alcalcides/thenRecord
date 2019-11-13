@@ -187,4 +187,5 @@ localStorage.getItem('nomeDaVariavel')
 
 pessoa = {'nome': "Eu", "idade": 45}
 var texto = JSON.stringify(pessoa)
-var r = JSON.parse(texto)
+var pessoa_received = JSON.parse(texto)
+var pessoa_received = JSON.parse(texto) || ["Defaulf"]

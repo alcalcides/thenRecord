@@ -188,3 +188,4 @@ Resgata o valor armazenado
 criação de um objeto 
 conversão de objeto para JSON
 conversão JSON para objeto
+idem com a robustez de tratar o caso de não haver nada gravado previamente
