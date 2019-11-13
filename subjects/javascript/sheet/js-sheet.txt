@@ -54,6 +54,8 @@ window.document.getElementsById('idTal')
 window.document.getElementsByName('nameTal')
 window.document.getElementsByClassName('classTal')
 window.document.querySelector('p#idTal')
+window.document.querySelector("p[id=idTal]")
+window.document.querySelector('body head#first nav#idTal')
 window.document.querySelectorAll('p.classTal')
 window.document.getElementsByTagName('p')
 var tal = window.document.getElementsByTagName('p')
@@ -62,6 +64,8 @@ tal.focus()
 tal.innerText = 'meu texto'
 tal.innerHTML = "<h2>Meu texto</h2>"
 tal[0].style.color = 'green'
+tal[0].style.background-color = "gray"
+tal[0].style.backgroundColor = "gray"
 tal[0].value.length == 0
 tal2 = document.createElement('img')
 tal2.alt = 'alguma coisa'
@@ -92,6 +96,14 @@ function nometal(){
     }
 </script>
 
+<div id="tal"><p>HelloWorld!</p></div>
+<script>
+    var tal = document.querySelector('div[id=tal]')
+    tal.onclick = function (){
+        //bla bla bla
+    }
+</script>
+  
 console.log("mensagem")
 conlose.log("m1", "m2")
 if(tal > 12) {console.log("você já é um adolescente")}
@@ -146,6 +158,7 @@ console.log(x('hello', ' world'))
 let elemento = document.querySelector('div#ele')
 let novato = document.createElement('p')
 novato.text = 'mais conteudo'
+novato.setAttribute('class', 'grande')
 elemento.appendChild(novato)
 
 let x = function somar(a, b){return a+b}
@@ -168,3 +181,10 @@ obj.fazerAniversario()
 setInterval(obj.fazerAniversario, 1000)
 setInterval(obj.fazerAniversario(), 1000)
 setTimeout(obj.fazerAniversario, 5000)
+
+localStorage.setItem('nomeDaVariavel', 'valor em String')
+localStorage.getItem('nomeDaVariavel')
+
+pessoa = {'nome': "Eu", "idade": 45}
+var texto = JSON.stringify(pessoa)
+var r = JSON.parse(texto)

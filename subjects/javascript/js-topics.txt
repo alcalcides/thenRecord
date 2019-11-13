@@ -167,6 +167,7 @@ precedência de operadores
 DOM 
     Document object model
     Recursos do navegador para JavaScript
+    Árvare de elementos HTML rederizados
     Elementos
         window (janela, documento)
             location (url)
@@ -202,17 +203,17 @@ DOM
                 retorna vetor de elementos
     Eventos 
         mouse
-            mouseenter
+            onmouseenter
                 cursor entrou no elemento
-            mousemove
+            onmousemove
                 cursor se movendo dentro do elemento 
-            mousedown
-                botão esquerdo acionado (dentro do elemento?)
-            mouseup
-                botão esquerdo do mouse liberado (dentro do elemento?)
-            click
-                rápido aperto do botão esquerdo (dentro do elemento?)
-            mouseout
+            onmousedown
+                botão esquerdo acionado 
+            onmouseup
+                botão esquerdo do mouse liberado 
+            onclick
+                rápido aperto do botão esquerdo 
+            onmouseout
                 cursor saiu do elemento
             onload
                 quando o elemento for carregado
@@ -299,3 +300,21 @@ funções controladoras no tempo
     setTimeout(string nomeDaFuncao, int xMilisegundos)
         após x milisegundos a função é chamada
         redirecionamentos automáticos
+
+armazenamento local
+    à prova de atualizar a página (F5)
+    objeto global 'localStorage'
+        setItem('identificador', valor)
+            valor é uma string (USE JSON, se valor não é uma string)
+        getItem('identificador')
+            retorna o valor guardados 
+            retorna null se não houver o índice 'identificador'
+JSON
+    JavaScript Object Notation
+    objeto do tipo string
+    conversões tipoNãoString -> JSON 
+        JSON.stringify(variavel)
+    conversão JSON -> tipoTal
+        JSON.parse(variavel)
+
+

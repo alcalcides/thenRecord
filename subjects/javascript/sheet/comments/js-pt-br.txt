@@ -54,6 +54,8 @@ retorna o vetor de elementos cuja tag tem id="idTal"
 retorna o vetor de elementos cuja tag tem name="nameTal", equivale a *[name=nameTal]
 retorna o vetor de elementos cuja tag tem class="classTal", equivale a *[class=classTal]
 retorna o elemento cujo id é idTal
+idem
+navegando pela árvore DOM
 retorna vetor com todos os parágrafos cuja classe é classTal
 retorna o vetor de elementos html cuja tag é p (parágrafos)
 guarda esse vetor em "tal"
@@ -62,6 +64,8 @@ ativa o cursor no elemento
 configura o conteúdo do elemento
 idem com suporte a tags HTML
 configura o primeiro elemento do vetor tal para ter color = green. Sobrepõem style do html e css, mas não o !important do css.
+define o background 
+idem, utilizando camel case em lugar do hifem tradicional do padrão CSS
 testa se o elemento está vazio, sem letras
 cria elemento html <img> e guarda sua referência em tal2
 atribuiu a propriedade
@@ -92,6 +96,14 @@ ligação html/javaScript pelo JavaScript
 
 
 
+outro tipo de ligação htmljavaScript pelo JavaScript
+
+
+
+
+
+
+  
 escreve na tela de console (funciona no console nodeJS)
 escreve os dois argumentos, lado a lado
 condição simples
@@ -168,3 +180,11 @@ modifica o campo idade para 16
 A cada 1000 milissegundos (1 segundo) a função obj.fazerAniversario() é chamada
 Chama-se a função obj.fazerAniversario() e pronto
 Depois de 5000 milissegundos (5 segundos) a função é chamada
+
+
+Guarda valor no armazenamento local
+Resgata o valor armazenado
+
+criação de um objeto 
+conversão de objeto para JSON
+conversão JSON para objeto
