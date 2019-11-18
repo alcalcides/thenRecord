@@ -1,0 +1,42 @@
+express
+    framework
+    gerenciamento de
+        rotas
+        views
+
+package-lock.json
+    cache
+    lista de todas as dependências instaladas
+
+server.js/index.js
+	abstrai o servidor
+	inicialização da aplicação
+	a aplicação é um arquivo javaScript
+
+Fluxo básico de uma aplicação node com express
+	instanciar o express 
+		require('express')
+	inicializar o express
+		const app = express()
+	configurar as rotas
+		app.get('/', function(req, res){ ... })
+			req
+				requisição feita pelo usuário
+				guarda as informações da requisição
+					IP
+					url
+					***
+			res
+				retorno da aplicação ao usuário
+				res.send('retorno da aplicação')
+
+nodemon
+	mais produtividade: 
+		cada alteração salva provoca reinício automático do servidor local node
+	dependência local
+		só no ambiente de desenvolvimento
+		npm install -D nodemon
+	uso
+		package.json/scripts
+			"dev": "nodemon server.js"
+		"~ npm run dev"

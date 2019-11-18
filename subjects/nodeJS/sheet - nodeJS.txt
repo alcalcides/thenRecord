@@ -1,0 +1,21 @@
+//Hello World
+~ npm init -y #cria o pacote.json
+~ npm install express #instala a dependência express
+~ touch server.js #cria o arquivo que inicializa a aplicação. Pode ser index.js
+
+const express = require('express') //instancia a dependência express na aplicação
+const app = express() //inicializa o express
+
+app.get('/', function(req, res) { 	//quando a url for a raiz da aplicação, isto é, "/"
+    res.send('Hello World!')		//retorne "Hello World!"
+})
+
+const app.listen(3001) //configura localhost:3001 para rodar a aplicação
+
+~ node server.js #executa a aplicação no servidor nodeJS
+//Hello World finalizado
+
+
+~ npm install --save-dev nodemon #instala só no ambiente de desenvolvimento
+~ npm install -D nodemon #idem
+~ npm run scriptTal #executa o scriptTal previsto em package.json/scripts
