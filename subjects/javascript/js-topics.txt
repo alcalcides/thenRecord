@@ -309,6 +309,7 @@ armazenamento local
         getItem('identificador')
             retorna o valor guardados 
             retorna null se não houver o índice 'identificador'
+
 JSON
     JavaScript Object Notation
     objeto do tipo string
