@@ -40,3 +40,14 @@ nodemon
 		package.json/scripts
 			"dev": "nodemon server.js"
 		"~ npm run dev"
+
+docker
+	container = "emulação" de uma máquina virtual
+	útil para implementar banco de dados mongodb
+	listar containers em execução
+		sudo docker ps 
+	instalar containers
+		sudo docker pull mongo #instala o container mongo
+	executar containers
+		sudo docker run --name mongodb -p 27017:27017 -d mongo #executa o container mongo instalado
+		sudo docker run [nomeDoContainer] [direcionamento portaLocal->portaDocker] [containerInstalado]

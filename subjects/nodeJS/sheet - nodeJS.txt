@@ -1,7 +1,7 @@
 //Hello World
-~ npm init -y #cria o pacote.json
-~ npm install express #instala a dependência express
-~ touch server.js #cria o arquivo que inicializa a aplicação. Pode ser index.js
+$ npm init -y #cria o pacote.json
+$ npm install express #instala a dependência express
+$ touch server.js #cria o arquivo que inicializa a aplicação. Pode ser index.js
 
 const express = require('express') //instancia a dependência express na aplicação
 const app = express() //inicializa o express
@@ -12,10 +12,16 @@ app.get('/', function(req, res) { 	//quando a url for a raiz da aplicação, ist
 
 const app.listen(3001) //configura localhost:3001 para rodar a aplicação
 
-~ node server.js #executa a aplicação no servidor nodeJS
+$ node server.js #executa a aplicação no servidor nodeJS
 //Hello World finalizado
 
+//Nodemon para automatizar reinicializações do servidor após alterações no código
+$ npm install --save-dev nodemon #instala só no ambiente de desenvolvimento
+$ npm install -D nodemon #idem
+$ npm run scriptTal #executa o scriptTal previsto em package.json/scripts
 
-~ npm install --save-dev nodemon #instala só no ambiente de desenvolvimento
-~ npm install -D nodemon #idem
-~ npm run scriptTal #executa o scriptTal previsto em package.json/scripts
+//Docker
+sudo docker ps #lista containers que estão rodando
+sudo docker pull mongo #instala o container mongo
+sudo docker run --name mongodb -p 27017:27017 -d mongo #executa o container mongo instalado
+	
