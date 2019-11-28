@@ -51,3 +51,7 @@ docker
 	executar containers
 		sudo docker run --name mongodb -p 27017:27017 -d mongo #executa o container mongo instalado
 		sudo docker run [nomeDoContainer] [direcionamento portaLocal->portaDocker] [containerInstalado]
+
+Banco de Dados MongoDB
+	Não relacional
+	Interface = Robo 3T (Robomongo)
