@@ -49,9 +49,50 @@ docker
 	instalar containers
 		sudo docker pull mongo #instala o container mongo
 	executar containers
-		sudo docker run --name mongodb -p 27017:27017 -d mongo #executa o container mongo instalado
+		sudo docker run --name mongodb -p 27017:27017 -d mongo #primeira execução
 		sudo docker run [nomeDoContainer] [direcionamento portaLocal->portaDocker] [containerInstalado]
 
 Banco de Dados MongoDB
 	Não relacional
-	Interface = Robo 3T (Robomongo)
+	Interface = Robo 3T (Robomongo),
+	Robo 3T (Robomongo)
+		Interface gráfica para o MongoDB
+	Mongoose
+		ORM = object relational mapping
+			traduz os dados do BD para objetos javaScript
+		manipular o BD com linguagem javaScript
+		dispensa o conhecimento de SQL ou similar
+		CRUD de BD em javaScript
+		npm install mongoose
+	implementação
+		instanciar o mongoose
+			const mongoose = require("mongoose")
+		conecção com a base de dados baseTal (baseTal é um 'esquema')
+			mongoose.connect("mongodb://localhost:27017/baseTal", {useNewUrlParser: true}) 
+			mongoose.connect("mongodb://user:password@host:27017/baseTal", {
+				useUnifiedTopology: true,
+				useNewUrlParser: true}) 
+	MVC
+		Model = tabelas, esquemas
+		cada tabela é um arquivo TabelaTal.js
+		tabela básica com mongose:
+			const mongoose = require('mongoose')
+			const ItemSchema = mongoose.Schema({
+			    title:{
+			        type: String,
+			        required: true
+			    }
+			});
+		tornar a tabela visível
+			mongoose.model("Item", ItemSchema)
+		chamar a criação da tabela no programa cliente
+			require("path/to/models/Item")
+			com require-dir
+				npm install require-dir
+				evita chamar todas as entidades dentro de models
+				implementação
+const requireDir = require("require-dir") // no cabeçalho
+//....
+requireDir("path/to/models") //Instancia a tabela
+const Table = mongoose.model("Table") //Chama a criação da tabela 
+Table.create(doc) //cria um novo registro. O parâmetro doc é do tipo JSON

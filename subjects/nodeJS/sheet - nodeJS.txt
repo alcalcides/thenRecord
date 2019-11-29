@@ -24,7 +24,20 @@ $ npm run scriptTal #executa o scriptTal previsto em package.json/scripts
 sudo docker ps #lista containers que estão rodando
 sudo docker pull mongo #instala o container mongo
 sudo docker run --name mongodb -p 27017:27017 -d mongo #executa o container mongo instalado
+sudo docker ps -a #mostra todos os containers baixados na máquina
+sudo docker ps #mostra os containers em execução
+sudo docker start mongodb #executa o container já instalado anteriormente	
 
-Robo 3T (Robomongo)
-Interface para o MongoDB
-	
+npm install mongoose #para usar javaScript para manipular banco de dados
+const mongoose = require("mongoose") //No cabeçalho, para poder usar mongoose
+mongoose.connect("mongodb://localhost:27017/nodeapi", {
+	useUnifiedTopology: true, 
+	useNewUrlParser: true}) #conecção com a base de dados nodeapi
+const TableOne = mongoose.Schema({title: {type: String, required: true}}) //Cria uma tabela
+mongose.model("EntityTal", TableOne) //Torna TableOne visível para todo o sistema sob o nome EntityTal
+require("path/to/models/EntityTal") //Chama o script de criação da tabela
+npm install require-dir #automatiza a chamada das tabelas criadas no model, evita require("./src/models/TableTal.js") para cada tabela criada
+const requireDir("require-dir") //Instancia a bibliote require-dir
+requireDir(path/to/models) //Instancia todas as tabelas dentro de models/
+const TableTal = mongoose.model("EntityTal") //cria a tabela EntityTal e estabele o objeto TableTal como sua referência
+TableTal.create({title = "titleTal"}) //cria um registro, equivalente ao INSERT do SQL
