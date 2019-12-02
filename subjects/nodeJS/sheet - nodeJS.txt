@@ -28,16 +28,24 @@ sudo docker ps -a #mostra todos os containers baixados na máquina
 sudo docker ps #mostra os containers em execução
 sudo docker start mongodb #executa o container já instalado anteriormente	
 
-npm install mongoose #para usar javaScript para manipular banco de dados
+//conecção com a base de dados usando mongoose
+$ npm install mongoose #para usar javaScript para manipular banco de dados
 const mongoose = require("mongoose") //No cabeçalho, para poder usar mongoose
 mongoose.connect("mongodb://localhost:27017/nodeapi", {
 	useUnifiedTopology: true, 
-	useNewUrlParser: true}) #conecção com a base de dados nodeapi
-const TableOne = mongoose.Schema({title: {type: String, required: true}}) //Cria uma tabela
+	useNewUrlParser: true}) 
+
+//Arquivo de criação de tabela
+const TableOne = mongoose.Schema({title: {type: String, required: true}}) 
 mongose.model("EntityTal", TableOne) //Torna TableOne visível para todo o sistema sob o nome EntityTal
-require("path/to/models/EntityTal") //Chama o script de criação da tabela
-npm install require-dir #automatiza a chamada das tabelas criadas no model, evita require("./src/models/TableTal.js") para cada tabela criada
-const requireDir("require-dir") //Instancia a bibliote require-dir
-requireDir(path/to/models) //Instancia todas as tabelas dentro de models/
-const TableTal = mongoose.model("EntityTal") //cria a tabela EntityTal e estabele o objeto TableTal como sua referência
-TableTal.create({title = "titleTal"}) //cria um registro, equivalente ao INSERT do SQL
+
+//Chamar o script de criação no cliente
+require("path/to/models/EntityTal") 
+
+//Idem com o recurso "require-dir"
+$ npm install require-dir #automatiza a chamada das tabelas criadas no model, evita require("./src/models/TableTal.js") para cada tabela criada
+const requireDir("require-dir") //Instancia a biblioteca require-dir
+requireDir("path/to/models") //Instancia todas as tabelas dentro de models/
+const table = mongoose.model("EntityTal") //cria a tabela EntityTal e estabele o objeto table como sua referência
+
+table.create({title = "titleTal"}) //cria um registro, equivalente ao INSERT do SQL

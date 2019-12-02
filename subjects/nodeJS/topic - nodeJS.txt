@@ -68,7 +68,9 @@ Banco de Dados MongoDB
 		instanciar o mongoose
 			const mongoose = require("mongoose")
 		conecção com a base de dados baseTal (baseTal é um 'esquema')
-			mongoose.connect("mongodb://localhost:27017/baseTal", {useNewUrlParser: true}) 
+			mongoose.connect("mongodb://localhost:27017/baseTal", {
+				useUnifiedTopology: true,
+				useNewUrlParser: true}) 
 			mongoose.connect("mongodb://user:password@host:27017/baseTal", {
 				useUnifiedTopology: true,
 				useNewUrlParser: true}) 
@@ -96,3 +98,11 @@ const requireDir = require("require-dir") // no cabeçalho
 requireDir("path/to/models") //Instancia a tabela
 const Table = mongoose.model("Table") //Chama a criação da tabela 
 Table.create(doc) //cria um novo registro. O parâmetro doc é do tipo JSON
+
+Postman
+	IDE para envio e recebimento de dados para um servidor
+	Métodos
+		GET
+			receber dados do servidor
+		POST
+			enviar dados para o servidor
