@@ -49,3 +49,29 @@ requireDir("path/to/models") //Instancia todas as tabelas dentro de models/
 const table = mongoose.model("EntityTal") //cria a tabela EntityTal e estabele o objeto table como sua referência
 
 table.create({title = "titleTal"}) //cria um registro, equivalente ao INSERT do SQL
+
+//Paginação
+$ npm install mongoose-paginate
+//No arquivo que cria a tabela
+const mongoosePaginate = require("mongoose-paginate")
+/* ... const TableSchema = new  mongoose.Schema()... */
+TableSchema.plugin(mongoosePaginate)
+//Controler:
+const item = await Item.paginate({}, {
+	page: 1,
+	limit: 10
+})	
+
+//Controle de páginas 
+const { page = 1 } = req.query
+//...
+const item = await Item.paginate({}, {
+	page, // short syntax page: page
+	limit: 10
+})	
+
+//tornando a api visível externamente
+$ npm install cors
+//No server.js
+const cors = require("cors")
+app.use(cors())//totalmente visível

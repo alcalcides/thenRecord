@@ -39,7 +39,7 @@ nodemon
 	uso
 		package.json/scripts
 			"dev": "nodemon server.js"
-		"~ npm run dev"
+			"~ npm run dev"
 
 docker
 	container = "emulação" de uma máquina virtual
@@ -50,7 +50,7 @@ docker
 		sudo docker pull mongo #instala o container mongo
 	executar containers
 		sudo docker run --name mongodb -p 27017:27017 -d mongo #primeira execução
-		sudo docker run [nomeDoContainer] [direcionamento portaLocal->portaDocker] [containerInstalado]
+		sudo docker run [nomeDoContainer] [direcionamento portaLocal->portaDocker] 
 
 Banco de Dados MongoDB
 	Não relacional
@@ -101,8 +101,45 @@ Table.create(doc) //cria um novo registro. O parâmetro doc é do tipo JSON
 
 Postman
 	IDE para envio e recebimento de dados para um servidor
+	Possibilita depurar o back end ainda sem front
+	Conversa diretamente com o back
 	Métodos
 		GET
 			receber dados do servidor
 		POST
 			enviar dados para o servidor
+		PUT
+			atualizar dados
+		DELETE
+			deletar dados
+
+Paginação
+	Exibir um subconjunto dos dados
+	Navegar pelos registros através de páginas
+	$ npm install mongoose-paginate
+	Implementação
+		Model
+			const mongoosePaginate = require("mongoose-paginate")
+			(...)
+			TableSchema.plugin(mongoosePaginate) //no script de criação da página
+		Controller
+			const item = await Item.paginate({//possíveis filtros},
+			{
+				page: 1, //página default
+				limit: 10 //máximo de itens exibidos por páginas
+			})	
+	parâmetro get para páginas
+		Controller
+			const { parametro = numDefault} = req.query
+			Item.paginate({}, {
+				paramatro: parametro//ou só parametro, short syntax
+			})
+
+
+CORS
+	Cross-origin resource sharing
+	veiculação de dados para clientes externos
+	npm install cors
+	no server.js
+		const cors = require("cors")
+		app.use(cors(setting))
