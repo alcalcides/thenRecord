@@ -1,0 +1,41 @@
+Biblioteca JavaScript
+	Não faz além do que JS pode fazer
+	Organiza código JS
+		Backend deve retornar JSON (API Rest)
+		Back separado do Front
+Otimizado para criação de SPA (single page application)
+
+Criação do projeto
+	pré-requisitos da máquina
+		node
+		npm install --global create-react-app
+			cria estrutura de arquivos
+			compatibilidade com versões anteriores do EcmaScript (transpilação)
+	create-react-app meuApp
+
+Arquitetura de arquivos
+	/node_modules
+		dependências instaladas
+	/public
+		arquivos enviados ao browser do cliente
+		favicon.ico	
+		manifest.json
+			criação de PWA
+	./package.json
+		declaração de dependências
+			react (autoreferência)
+			react-dom 
+				controla a árvore DOM
+			react-scripts
+				transpilação de código
+		scripts
+			comandos para serem executados pelo terminal
+			npm run scriptTal 
+			npm scriptTal
+	.lock
+		cache de dependências
+	/src
+		códido da aplicação
+		serviceWorker.js
+			PWA
+
