@@ -189,3 +189,11 @@ criação de um objeto
 conversão de objeto para JSON
 conversão JSON para objeto
 idem com a robustez de tratar o caso de não haver nada gravado previamente
+
+instaciação de serviço assíncrono AJAX
+configura parâmetro reais da requisição GET
+chama método GET
+esta função é chamada automaticamente ao receber a resposta do servidor
+4 significa que a resposta voltou 
+responseText é o conteúdo retornado do servidor
+

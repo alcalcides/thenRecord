@@ -189,3 +189,11 @@ pessoa = {'nome': "Eu", "idade": 45}
 var texto = JSON.stringify(pessoa)
 var pessoa_received = JSON.parse(texto)
 var pessoa_received = JSON.parse(texto) || ["Defaulf"]
+
+var ajax = new XMLHttpRequest()
+ajax.open("GET", "https://api.github.com/users/alcalcides")
+ajax.send()
+ajax.readyState = function(){
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML = this.responseText;
+}

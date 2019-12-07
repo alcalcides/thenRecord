@@ -318,4 +318,17 @@ JSON
     conversão JSON -> tipoTal
         JSON.parse(variavel)
 
-
+AJAX
+    atualizar conteúdo sem atualizar a página
+    sincronia com o servidor
+    evento assíncrono 
+        não se sabe quando ocorre
+        assim que há mudança no server, há atualização no client
+    XMLHttpRequest
+        classe que implementa AJAX
+    fluxo
+        var ajax = new XMLHttpRequest()
+        ajax.open('GET', 'urlTal')
+        ajax.send()
+        verificar resposta no console/Network
+        chamada automática da função ajax.onreadystatechange, se definida
