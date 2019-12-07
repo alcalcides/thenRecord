@@ -8,6 +8,7 @@ git clone <sshAddress> <folder>
 ssh-keygen
 
 git remote -v 
+git remote add origin repo@repo.com:user/repo.git
 git push origin master 
 git pull origin master 
 git pull --allow-unrelated-histories

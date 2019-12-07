@@ -8,6 +8,7 @@ clona diretório github na pasta <folder>
 cria chave ssh numa estação para usar no github.com
 
 lista os nomes dos repositórios 
+adiciona um repositório remoto intitulado origin
 repositório recebe o que está no ramo master do repositório local
 atualiza ramo master local com o arquivos modificados no repositório
 idem para quando há alterações locais não sincronizadas com o repositório remoto
