@@ -20,6 +20,7 @@ git add .
 git add *.php 
 git reset HEAD <file> 
 git rm <file> 
+git rm --cached <file>
 
 git commit -m "Description" 
 git commit -a -m "Description" 

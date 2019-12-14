@@ -19,7 +19,8 @@ envia arquivos apontados pelo git status para o diretório de espera
 opera sobre todos os arquivos apontados pelo git status
 opera sobre os arquivos com extensão .php apontodas pelo git status
 retira da área de espera
-libera arquivo do diretório git após sua exclusão da área de trabalho
+libera arquivo do repositório remoto e da área de trabalho
+libera arquivo do repositório remoto mas não da área de trabalho
 
 Cadastra versão do diretório de espera
 cadastra versão do diretório de trabalho
