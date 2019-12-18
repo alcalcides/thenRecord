@@ -332,3 +332,34 @@ AJAX
         ajax.send()
         verificar resposta no console/Network
         chamada automática da função ajax.onreadystatechange, se definida
+    Promises 
+        objeto usado para processamento assíncrono
+        representa um dado que pode estar disponível
+            agora
+            no futuro
+            ou nunca
+        é um objeto 
+            construtor
+                argumento é uma função 
+                    que tem dois argumentos que são as funções pré-definidas
+                        resolve
+                        reject
+                    cada qual com um argumento
+                        que é o retorno da promessa
+                        para cada um dos respectivos casos
+                corpo 
+                    encapsula o código AJAX tracional com XMLHttpRequest
+                        chama resolve() e reject() 
+                        passando como argumentos o que será retornado para cada respectivo caso
+            método then(...)
+                executar quando a resposta chegar
+                executar se a resposta vier com status 200
+                argumento é uma função com argumento 'response'
+            método catch(...)
+                executar quando a resposta chegar
+                executar se houver erro na requisição
+                argumento é uma função com argumento 'error'
+        método de instanciação
+            minhaPromise()
+                .then(function(response){//response === argumento do resolve})
+                .catch(function(error){//error === argumento do reject});

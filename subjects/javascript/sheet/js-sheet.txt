@@ -105,7 +105,8 @@ function nometal(){
 </script>
   
 console.log("mensagem")
-conlose.log("m1", "m2")
+console.log("m1", "m2")
+console.warn("take care")
 if(tal > 12) {console.log("você já é um adolescente")}
 
 if(tal > 12) {console.log("você já é um adolescente")}
@@ -195,5 +196,33 @@ ajax.open("GET", "https://api.github.com/users/alcalcides")
 ajax.send()
 ajax.readyState = function(){
     if (this.readyState == 4 && this.status == 200) {
-    document.getElementById("demo").innerHTML = this.responseText;
+    document.getElementById("demo").innerHTML = this.responseText
 }
+
+
+//Promises
+var myPromise = function () {
+    return new Promise (
+        function(resolve, reject){
+            //Ajax coding
+            var ajax = new XMLHttpRequest()
+            ajax.open("GET", "https://api.github.com/users/alcalcides")
+            ajax.send()
+            ajax.readyState = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(JSON.parse(this.responseText))
+                else{
+                    reject('Error')
+                }
+            }
+        }
+    )    
+}
+myPromise()
+    .then(function(response){
+        console.log(response)
+        document.getElementById("demo").innerHTML = response
+    })
+    .catch(function(error){
+        console.log(error)
+    });
