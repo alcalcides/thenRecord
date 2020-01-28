@@ -51,3 +51,5 @@ git checkout <tagName>
 git checkout "master" 
 git checkout <branchName> 
 git checkout -b <branchName> 
+
+git remote set-url origin <path>

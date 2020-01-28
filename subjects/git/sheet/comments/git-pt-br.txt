@@ -51,3 +51,5 @@ diretório de trabalho é retornado para o momento especificado
 carrega a pasta de trabalho com a versão do branch master
 carrega branch específico na área de trabalho
 cria e carrega novo branch na área de trabalho
+
+atualiza o link de um repositório remoto
