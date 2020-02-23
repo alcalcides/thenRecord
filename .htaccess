@@ -5,9 +5,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteBase /
 
-RewriteRule ^home$ /hworldsheet/site/view/home.php [L]
-RewriteRule ^conteudo$ /hworldsheet/site/view/conteudo.php [L]
-RewriteRule ^conteudo/git$ /hworldsheet/site/view/content/git.php [L]
-RewriteRule ^conteudo/javascript$ /hworldsheet/site/view/content/javascript.php [L]
-RewriteRule ^conteudo/orientacao-a-objetos$ /hworldsheet/site/view/content/oo.php [L]
-RewriteRule ^conteudo/sql$ /hworldsheet/site/view/content/sql.php [L]
+RewriteRule ^home$ /thenrecord/site/view/home.php [L]
+RewriteRule ^conteudo$ /thenrecord/site/view/conteudo.php [L]
+RewriteRule ^conteudo/git$ /thenrecord/site/view/content/git.php [L]
+RewriteRule ^conteudo/javascript$ /thenrecord/site/view/content/javascript.php [L]
+RewriteRule ^conteudo/orientacao-a-objetos$ /thenrecord/site/view/content/oo.php [L]
+RewriteRule ^conteudo/sql$ /thenrecord/site/view/content/sql.php [L]
