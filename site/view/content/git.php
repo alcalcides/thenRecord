@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>git | hWorldSheet</title>
+    <title>Git | Then Record</title>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
         $obsLines = file($obsFile);
 
         if(count($sheetLines) != count($obsLines)){
-            echo "Erro: número de linhas diferentes entre sheet e comment";
+            echo "Error: the sheet file has a different number of lines of comment file";
         }
         else{
             $numberOfLines = count($obsLines);

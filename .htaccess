@@ -5,9 +5,18 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteBase /
 
-RewriteRule ^home$ /thenrecord/site/view/home.php [L]
-RewriteRule ^conteudo$ /thenrecord/site/view/conteudo.php [L]
-RewriteRule ^conteudo/git$ /thenrecord/site/view/content/git.php [L]
-RewriteRule ^conteudo/javascript$ /thenrecord/site/view/content/javascript.php [L]
-RewriteRule ^conteudo/orientacao-a-objetos$ /thenrecord/site/view/content/oo.php [L]
-RewriteRule ^conteudo/sql$ /thenrecord/site/view/content/sql.php [L]
+# development environment (localhost)
+#RewriteRule ^home$ /thenrecord/site/view/home.php [L]
+#RewriteRule ^content$ /thenrecord/site/view/content.php [L]
+#RewriteRule ^content/git$ /thenrecord/site/view/content/git.php [L]
+#RewriteRule ^content/javascript$ /thenrecord/site/view/content/javascript.php [L]
+#RewriteRule ^content/object-orientation$ /thenrecord/site/view/content/object-orientation.php [L]
+#RewriteRule ^content/sql$ /thenrecord/site/view/content/sql.php [L]
+
+# production environment(heroku)
+RewriteRule ^home$ /site/view/home.php [L]
+RewriteRule ^content$ /site/view/content.php [L]
+RewriteRule ^content/git$ /site/view/content/git.php [L]
+RewriteRule ^content/javascript$ /site/view/content/javascript.php [L]
+RewriteRule ^content/object-orientation$ /site/view/content/object-orientation.php [L]
+RewriteRule ^content/sql$ /site/view/content/sql.php [L]

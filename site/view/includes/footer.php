@@ -1,4 +1,4 @@
 <footer>
-    <p>Site em construção</p>
-    <p>Todos os direitos reservados</p>
+    <p>Site in works (always!)</p>
+    <p>All rights reserved</p>
 </footer>
