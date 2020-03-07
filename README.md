@@ -15,3 +15,18 @@ This began when I noticed that every new language used demand  effort to memoriz
 
 ---
 > This tends to be always in works.
+
+---
+
+## Development environment 
+
+Install apache2 and let /etc/apache2/sites-available/000-default.conf set DocumentRoot for /var/www/thenrecord
+
+```
+DocumentRoot /var/www/thenrecord
+```
+
+Then, access localhost/ in your favourite browser 
+
+
+

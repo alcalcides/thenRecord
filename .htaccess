@@ -5,15 +5,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteBase /
 
-# development environment (localhost)
-#RewriteRule ^home$ /thenrecord/site/view/home.php [L]
-#RewriteRule ^content$ /thenrecord/site/view/content.php [L]
-#RewriteRule ^content/git$ /thenrecord/site/view/content/git.php [L]
-#RewriteRule ^content/javascript$ /thenrecord/site/view/content/javascript.php [L]
-#RewriteRule ^content/object-orientation$ /thenrecord/site/view/content/object-orientation.php [L]
-#RewriteRule ^content/sql$ /thenrecord/site/view/content/sql.php [L]
+# See rules for development environment in README.md
 
-# production environment(heroku)
 RewriteRule ^home$ /site/view/home.php [L]
 RewriteRule ^content$ /site/view/content.php [L]
 RewriteRule ^content/git$ /site/view/content/git.php [L]

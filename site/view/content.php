@@ -13,10 +13,10 @@
 	</header>
 	<main>
 		<ul>
-			<li><a href="content/git" target="_self">Git</a></li>
-			<li><a href="content/javascript" target="_self">JavaScript</a></li>
-			<li><a href="content/object-orientation" target="_self">Object Orientation</a></li>
-			<li><a href="content/sql" target="_self">SQL</a></li>
+			<li><a href="content/git">Git</a></li>
+			<li><a href="content/javascript">JavaScript</a></li>
+			<li><a href="content/object-orientation">Object Orientation</a></li>
+			<li><a href="content/sql">SQL</a></li>
 		</ul>
 	</main>
 	<?php include 'includes/footer.php';?>		

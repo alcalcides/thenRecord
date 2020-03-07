@@ -9,9 +9,9 @@
 <body>
     
     <?php
-        $sheetFile = "../../../subjects/git/sheet/git-sheet.txt";
+        $sheetFile = "../../../dbSubjects/git/sheet/sheet-git.txt";
         $sheetLines = file($sheetFile);
-        $obsFile = "../../../subjects/git/sheet/comments/git-pt-br.txt";
+        $obsFile = "../../../dbSubjects/git/sheet/comments/pt-br-git.txt";
         $obsLines = file($obsFile);
 
         if(count($sheetLines) != count($obsLines)){
