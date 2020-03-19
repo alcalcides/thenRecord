@@ -8,26 +8,14 @@
 </head>
 <body>
     
-    <?php
+    <?php 
+        require '../../control/loadSheet.php';
+        
         $sheetFile = "../../../dbSubjects/git/sheet/sheet-git.txt";
-        $sheetLines = file($sheetFile);
-        $obsFile = "../../../dbSubjects/git/sheet/comments/pt-br-git.txt";
-        $obsLines = file($obsFile);
-
-        if(count($sheetLines) != count($obsLines)){
-            echo "Error: the sheet file has a different number of lines of comment file";
-        }
-        else{
-            $numberOfLines = count($obsLines);
-            for ($i = 0; $i < $numberOfLines; $i++) { 
-                $setLine = "";
-                $setLine .= ($i + 1) . "&nbsp;&nbsp;&nbsp;";
-                $setLine .= htmlspecialchars($sheetLines[$i]) . "&nbsp;&nbsp;&nbsp;";
-                if(strlen($obsLines[$i]) > 1) $setLine .= "//";
-                $setLine .= htmlspecialchars($obsLines[$i]);
-                echo "<p>" . $setLine . "</p>";
-            }
-        }
+        $commentsFile = "../../../dbSubjects/git/sheet/comments/pt-br-git.txt";
+        
+        loadSheetAndCommentWithLineNumber("&nbsp;&nbsp;&nbsp;", $sheetFile, "//", $commentsFile);
+            
     ?>
 </body>
 </html>
