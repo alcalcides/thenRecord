@@ -1,6 +1,21 @@
 <?php
 
 /**
+ * Shows number line, sample of code and comments
+ * 
+ * @param string $subject
+ * @param string $commentTab
+ */
+function displaySheet(string $subject, string $commentTab) {
+    define('lineTab', '&nbsp;&nbsp;&nbsp;');
+    
+    $sheetFile = "../../../dbSubjects/{$subject}/sheet/sheet-{$subject}.txt";
+    $commentsFile = "../../../dbSubjects/{$subject}/sheet/comments/pt-br-{$subject}.txt";
+    
+    loadSheetAndCommentWithLineNumber(lineTab, $sheetFile, $commentTab, $commentsFile);
+}
+
+/**
  * Loads sheet content and its comments line by line displaying the number line
  * 
  * @param string $separatorSignal
@@ -16,7 +31,7 @@ function loadSheetAndCommentWithLineNumber(string $separatorSignal, string $shee
     $numberOfLines = count($commentContent);
     for ($i = 0; $i < $numberOfLines; $i ++) {
         $line = buildLine($separatorSignal, $commentSignal, $sheetContent, $commentContent, $i);
-        echo "<p>" . $line . "</p>";
+        echo "<p class='sheetLine'>" . $line . "</p>";
     }
 }
 

@@ -1,3 +1,5 @@
 # Approach
 
-+ View all database content in front 
++ Select topics vs sheet content
++ View topics file content 
+ 
