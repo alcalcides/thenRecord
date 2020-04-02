@@ -3,6 +3,8 @@ Biblioteca JavaScript
 	Organiza código JS
 		Backend deve retornar JSON (API Rest)
 		Back separado do Front
+	Manipula HTML via JS
+
 Otimizado para criação de SPA (single page application)
 
 Criação do projeto
@@ -18,9 +20,16 @@ Arquitetura de arquivos
 		dependências instaladas
 	/public
 		arquivos enviados ao browser do cliente
+		index.html
+			página html que chega ao cliente 
+			Ctrl + U
+			Primeiro arquivo a ser compilado
+			Chama o arquivo /src/index.js logo após completamente renderizado
 		favicon.ico	
 		manifest.json
 			criação de PWA
+		robots.txt
+		logoTamX.png
 	./package.json
 		declaração de dependências
 			react (autoreferência)
@@ -32,10 +41,57 @@ Arquitetura de arquivos
 			comandos para serem executados pelo terminal
 			npm run scriptTal 
 			npm scriptTal
-	.lock
+	./package-lock.json
 		cache de dependências
 	/src
-		códido da aplicação
+		index.js
+			server NodeJS
+			chamado automaticamente 
+		App.css
 		serviceWorker.js
 			PWA
+		App.js
+			é o aplicativo em si
+		App.test.js
+		index.css
+		logo.svg
+		serviceWorker.js
+		setupTests.js
+
+Conceitos do React
+	Componente
+		Similar a uma tag HTML
+		Arquivo App.js exporta o componente App
+			arquivo do tipo JSX
+				JavaScript que retorna código XML (HTML, no caso)
+				O react compila o JSX
+		Nome do Arquivo começa com LETRA MAIÚSCULA
+	Propriedade
+		Análago aos atributos das tags HTML
+		São atributos definidos para Componentes do React
+		Permite a passagem de parâmetros na instanciação do componente
+		Permite um comportamento diferente do componente
+		Cada propriedade é um atributo do objeto que é o parâmetro do Componente React
+		Usar {} para renderizar JS em JSX
+			{parametro.name}
+		Propriedade "children"
+			Não precisa instanciar no instacimento
+			Refere-se a todo o conteúdo dentro das tags de abertura e fechamento	
+		Permite desestruturação de variável na declaração do componente
+	Estado
+		Informação mantida pelo componente mesmo ele sendo recarregado
+		Não usar variáveis convencionais
+			não sobrevivem ao recarregamento do componete
+		importe useState de 'react'
+		useState retorna um vetor de duas posições
+			a variável que guarda o estado 
+				inicialmente definido em useState(valorInical)
+			o nome da função que 
+				reconhece o escopo da variável que guardo o estado e
+				é a única que pode alterar essa variável (IMUTABILIDADE)	
+
+
+
+
+
 
