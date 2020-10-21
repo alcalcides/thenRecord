@@ -40,6 +40,11 @@ cria um novo ramo (indicação: manutenção, versões)
 traz as alterações do ramo especificado para o ramo corrente
 
 relatório de todas as versões (commits) - Quem/Quando/Descrição
+limita a visualização do comando acima a 3 commits
+exibe os dados dos commites posteriores a 2017-07-04
+exibe os dados dos commites anteriores a 2017-07-04
+exibe as versões criadas por "DevX"
+exibe as versões cuja mensagem começa com "HOT-"
 Chave/Descrição
 Quem/Quando/Descrição/git diff
 idem para só para as 2 últimas entradas

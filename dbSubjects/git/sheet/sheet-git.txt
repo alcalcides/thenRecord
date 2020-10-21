@@ -40,6 +40,11 @@ git branch <branchName>
 git merge <branchName> 
 
 git log 
+git log -3
+git log --after 2017-07-04
+git log --before 2017-07-04
+git log --author="DevX"
+git log --grep="HOT-"
 git log --pretty=oneline 
 git log -p 
 git log -p -2 
