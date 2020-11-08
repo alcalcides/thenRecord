@@ -18,15 +18,70 @@ This began when I noticed that every new language used demand  effort to memoriz
 
 ---
 
-## Development environment 
+## Development environment for Linux users
 
-Install apache2 and let /etc/apache2/sites-available/000-default.conf set DocumentRoot for /var/www/thenrecord
+1. Install apache2 and php7
 
+2. Clone this project in /var/www/thenrecord. 
+
+```sh 
+	$ chown -R $USER:$USER /var/www/thenrecord
 ```
-DocumentRoot /var/www/thenrecord
+
+3. Set a virtual host to run thenrecord
+	Copy /etc/apache2/sites-available/000-default.conf to /etc/apache2/sites-available/thenrecord.conf 
+	Paste the following code into /etc/apache2/sites-available/thenrecord.conf 
+		
+```
+	ServerName thenrecord
+	ServerAlias www.thenrecord
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/thenrecord
+	<Directory /var/www/thenrecord>
+		Options Indexes FollowSymLinks
+		AllowOverride All
+		Require all granted
+	</Directory>
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
 ```
 
-Then, access localhost/ in your favourite browser 
+4. Disable the default apache2 site installed
 
+```sh
+	$ a2dissite 000-default 
+```
+
+5. Enable thenrecord with
+
+ 
+```sh
+	$ a2ensite thenrecord
+```
+
+6. Set friendly url
+
+```sh
+	$ a2enmod rewrite
+```
+
+7. Verify apache syntax errors with 
+
+```sh
+	$ a2dissite 000-default
+```
+
+8. Restart apache with
+
+```sh
+	$ service apache2 restart
+```
+
+9. `Finally`, access localhost/ in your favourite browser. For more explanation, see
+	- [digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-pt]
+	- [digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-20-04]
+
+[digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-pt]: <https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-pt>
+[digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-20-04]: <https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-20-04>
 
 
