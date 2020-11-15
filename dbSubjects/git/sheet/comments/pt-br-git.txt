@@ -7,13 +7,12 @@ clona diretório github na pasta <folder>
 
 cria chave ssh numa estação para usar no github.com
 
-lista os nomes dos repositórios 
-adiciona um repositório remoto intitulado origin
-repositório recebe o que está no ramo master do repositório local
-atualiza ramo master local com o arquivos modificados no repositório
+lista os nomes e urls dos repositórios 
+adiciona um repositório remoto intitulado <label>
+atualiza área de trabalho local (WORKSPACE) com a última versão remota
 idem para quando há alterações locais não sincronizadas com o repositório remoto
-atualiza ramo local <branchName> com o arquivos modificados no repositório
-exibe arquivos modificados no diretório de trabalho
+atualiza o repositório local (HEAD) sem alterar o WORKSPACE
+lista arquivos modificados no diretório de trabalho
 
 envia arquivos apontados pelo git status para o diretório de espera
 opera sobre todos os arquivos apontados pelo git status
@@ -22,12 +21,14 @@ retira da área de espera
 libera arquivo do repositório remoto e da área de trabalho
 libera arquivo do repositório remoto mas não da área de trabalho
 
-Cadastra versão do diretório de espera
-cadastra versão do diretório de trabalho
-edita última versão
+versiona o diretório de espera (STAGE AREA) no HEAD
+versiona o WORKSPACE diretamente no HEAD, não considera STAGE
+abre o editor de texto padrão para permitir modificar a mensagem da última versão. Salve o arquivo para atualizar a mensagem.
+atualiza a mensagem da última versão
 
 exibe as modificações nos arquivos em relação ao repositório
 idem, mas em relação ao diretório stage
+exibe as modificações em um determinado arquivo
 
 lista tags para identificar commits 
 cria tag para o commit atual
@@ -37,6 +38,9 @@ deleta tag
 lista os ramos criados
 deleta ramo especificado
 cria um novo ramo (indicação: manutenção, versões)
+renomeia uma branch (-m lembra mv, move, que é utilizado no linux para renomear)
+idem para quando se está na branch a ser renomeada
+desassocia a branch local carregada de sua referência remota
 traz as alterações do ramo especificado para o ramo corrente
 
 relatório de todas as versões (commits) - Quem/Quando/Descrição
@@ -57,4 +61,7 @@ carrega a pasta de trabalho com a versão do branch master
 carrega branch específico na área de trabalho
 cria e carrega novo branch na área de trabalho
 
-atualiza o link de um repositório remoto
+atualiza o link do repositório remoto <origin>
+
+atualiza a branch <branch> do repositório remoto <remote>  
+idem com o acrescimo de configurar a referência remota da branch corrente local, ou seja, da próxima vez, basta "git push"  

@@ -8,8 +8,7 @@ git clone <sshAddress> <folder>
 ssh-keygen
 
 git remote -v 
-git remote add origin repo@repo.com:user/repo.git
-git push origin master 
+git remote add <label> <url>
 git pull origin master 
 git pull --allow-unrelated-histories
 git fetch origin <branchName> 
@@ -24,10 +23,12 @@ git rm --cached <file>
 
 git commit -m "Description" 
 git commit -a -m "Description" 
-git commit -amend -m "Description edited" 
+git commit --amend
+git commit --amend -m "Description edited" 
 
 git diff 
-gif diff --staged 
+gif diff --staged
+git diff -p <file> 
 
 git tag 
 git tag -a <tagName> -m "Definição" 
@@ -36,7 +37,10 @@ git tag -d <tagName>
 
 git branch 
 git branch -d <branchName> 
-git branch <branchName> 
+git branch <branchName>
+git branch -m <old_name> <new_name>
+git branch -m <new_name> 
+git branch --unset-upstream
 git merge <branchName> 
 
 git log 
@@ -58,3 +62,6 @@ git checkout <branchName>
 git checkout -b <branchName> 
 
 git remote set-url origin <path>
+
+git push <remote> <branch>
+git push -u <remote> <branch>
