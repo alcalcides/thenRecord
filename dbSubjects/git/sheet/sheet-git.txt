@@ -28,7 +28,6 @@ git commit --amend -m "Description edited"
 
 git diff 
 gif diff --staged
-git diff -p <file> 
 
 git tag 
 git tag -a <tagName> -m "Definição" 

@@ -28,7 +28,6 @@ atualiza a mensagem da última versão
 
 exibe as modificações nos arquivos em relação ao repositório
 idem, mas em relação ao diretório stage
-exibe as modificações em um determinado arquivo
 
 lista tags para identificar commits 
 cria tag para o commit atual
