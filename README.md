@@ -85,3 +85,6 @@ This began when I noticed that every new language used demand  effort to memoriz
 [digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-20-04]: <https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-20-04>
 
 
+## Deploy
+
+Heroku CI is listening the branch master. Be aware it and don't allow broken code in this branch.
