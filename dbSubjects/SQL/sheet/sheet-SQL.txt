@@ -144,11 +144,15 @@ DELETE FROM nomeDaTabela
 WHERE 0
 LIMIT 1;
 
+
+ALTER SEQUENCE people_id_seq RESTART;
+ALTER SEQUENCE people_id_seq RESTART WITH 1;
+
+
 TRUNCATE TABLE nomeDaTabela; 
 
 
 CREATE INDEX nomeDoIndice ON nomeDaTabela(nomeDoCampo1(3),nomeDoCampo2(5)); 
-
 
 
 ALTER TABLE nomeDaTabela DROP INDEX nomeDoIndice;

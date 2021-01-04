@@ -144,11 +144,15 @@ Excluir registros
 
 
 
+Configura para 1 o autoincremento da chave primária.
+
+idem
+
 Exclui todos os registros da tabela
+
 
 Criar índices
 O inteiro de cada campo determina até que casa o indice deve considerar
-
 
 Remover índices
 
