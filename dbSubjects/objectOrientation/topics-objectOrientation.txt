@@ -13,7 +13,7 @@ História POO
 			Kristen Nygaard 
 		Centro Norueguês de Computação
 		1962
-		simulações computacionais	
+		simulações computacionais
 	Smalltalk
 		Alan Key
 		1972
@@ -55,7 +55,7 @@ classes
 	modela um objeto
 	camel case maiúsculo
 
-objeto	
+objeto
 	instanciação de uma classe
 	objetos de mesma classe tem mesmos membros, mas valores possivelmente diferentes
 	camel case minúsculo
@@ -159,7 +159,7 @@ modificador final para membros
 		constante
 		final float pi = 3.14f
 	método final
-		não pode ser sobreposto nas classes herdadas	
+		não pode ser sobreposto nas classes herdadas
 		obrigatoriamente herdado pelas classes filhas
 
 método abstrato 
@@ -210,7 +210,7 @@ pilares POO
 				classe Tal implements classe InterfaceDaClasseTal
 			diminuição de efeitos colaterais
 		uma classe pode ter mais de uma interface
-			classe Tal implements inter1, inter2, inter3,... 			
+			classe Tal implements inter1, inter2, inter3,...
 	herança*
 	polimorfismo*
 		
@@ -273,7 +273,7 @@ herança
 		Downcast
 			converter objeto de uma classe para sua classe filha (ou descendente)
 			conversão para um tipo mais específico
-			Animal animal = new Gato(); Gato tal = (Gato) animal			
+			Animal animal = new Gato(); Gato tal = (Gato) animal
 			ClassCastException
 				Animal animal = new Gato(); Rato rato = (Rato) animal;
 				instaceof 
