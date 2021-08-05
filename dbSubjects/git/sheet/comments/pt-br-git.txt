@@ -9,6 +9,8 @@ cria chave ssh numa estação para usar no github.com
 
 lista os nomes e urls dos repositórios 
 adiciona um repositório remoto intitulado <label>
+remove da máquina local o repositório remoto intitulado <label>
+
 atualiza área de trabalho local (WORKSPACE) com a última versão remota
 idem para quando há alterações locais não sincronizadas com o repositório remoto
 atualiza o repositório local (HEAD) sem alterar o WORKSPACE
@@ -64,3 +66,4 @@ atualiza o link do repositório remoto <origin>
 
 atualiza a branch <branch> do repositório remoto <remote>  
 idem com o acrescimo de configurar a referência remota da branch corrente local, ou seja, da próxima vez, basta "git push"  
+exclui a branch <branch> do repositório remote <label>

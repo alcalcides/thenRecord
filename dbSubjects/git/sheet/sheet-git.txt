@@ -9,6 +9,8 @@ ssh-keygen
 
 git remote -v 
 git remote add <label> <url>
+git remote remove <label>
+
 git pull origin master 
 git pull --allow-unrelated-histories
 git fetch origin <branchName> 
@@ -64,3 +66,4 @@ git remote set-url origin <path>
 
 git push <remote> <branch>
 git push -u <remote> <branch>
+git push -d <label> <branch>
