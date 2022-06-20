@@ -148,7 +148,7 @@ Configura para 1 o autoincremento da chave primária.
 
 idem
 
-Exclui todos os registros da tabela
+Exclui a tabela (perdem-se todos seus registros)
 
 
 Criar índices
